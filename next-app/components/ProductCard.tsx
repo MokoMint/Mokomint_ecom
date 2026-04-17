@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ProductData } from "../types/types";
 
 export type ProductCardProps = ProductData;
@@ -24,8 +25,14 @@ export default function ProductCard({
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 pb-4">
       <div className="product-item bg-light mb-4 shadow-sm">
-        <div className="product-img position-relative overflow-hidden" style={{ minHeight: 280 }}>
-          <img className="img-fluid w-100" src={image} alt={title} />
+        <div className="product-img position-relative overflow-hidden" style={{ height: 280 }}>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className="text-center py-4 px-3">
           <Link href={detailsUrl} className="h6 text-decoration-none text-dark d-block mb-2 text-truncate">

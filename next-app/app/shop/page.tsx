@@ -1,10 +1,12 @@
 import ProductList from "../../components/ProductList";
 import ShopBreadcrumb from "../../components/ShopBreadcrumb";
 import ShopFilters from "../../components/ShopFilters";
-import { ProductData } from "../../types/types";
+import { ProductData, DropdownsData } from "../../types/types";
 import productsData from "../../mockData/products.json";
+import dropdownsData from "../../mockData/dropdowns.json";
 
 const products: ProductData[] = productsData as ProductData[];
+const dropdowns: DropdownsData = dropdownsData as DropdownsData;
 
 export default function ShopPage() {
   return (
@@ -26,9 +28,9 @@ export default function ShopPage() {
                       Sort by
                     </button>
                     <div className="dropdown-menu" aria-labelledby="sortMenu">
-                      <a className="dropdown-item" href="#">Latest</a>
-                      <a className="dropdown-item" href="#">Popularity</a>
-                      <a className="dropdown-item" href="#">Best Rating</a>
+                      {dropdowns.sortOptions.map((option) => (
+                        <a key={option.value} className="dropdown-item" href="#">{option.label}</a>
+                      ))}
                     </div>
                   </div>
                 </div>

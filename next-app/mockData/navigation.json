@@ -1,0 +1,22 @@
+[
+  {
+    "href": "/",
+    "label": "Home"
+  },
+  {
+    "href": "/shop",
+    "label": "Shop"
+  },
+  {
+    "href": "/cart",
+    "label": "Shop Cart"
+  },
+  {
+    "href": "/checkout",
+    "label": "Checkout"
+  },
+  {
+    "href": "/contact",
+    "label": "Contact"
+  }
+]

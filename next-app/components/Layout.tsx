@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { DropdownsData, NavigationItem, CategoryItem } from "../types/types";
+import dropdownsData from "../mockData/dropdowns.json";
+import navigationData from "../mockData/navigation.json";
+import categoriesData from "../mockData/categories.json";
 
-const pages = [
-  { href: "/", label: "Home" },
-  { href: "/shop", label: "Shop" },
-  { href: "/cart", label: "Shop Cart" },
-  { href: "/checkout", label: "Checkout" },
-  { href: "/contact", label: "Contact" },
-];
+const dropdowns: DropdownsData = dropdownsData as DropdownsData;
+const pages: NavigationItem[] = navigationData as NavigationItem[];
+const categories: CategoryItem[] = categoriesData as CategoryItem[];
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -34,8 +34,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   My Account
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">Sign in</button>
-                  <button className="dropdown-item" type="button">Sign up</button>
+                  {dropdowns.account.map((item) => (
+                    <Link key={item.href} href={item.href} className="dropdown-item">{item.label}</Link>
+                  ))}
                 </div>
               </div>
               <div className="btn-group mx-2">
@@ -43,9 +44,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   USD
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">EUR</button>
-                  <button className="dropdown-item" type="button">GBP</button>
-                  <button className="dropdown-item" type="button">CAD</button>
+                  {dropdowns.currency.map((item) => (
+                    <button key={item.value} className="dropdown-item" type="button">{item.label}</button>
+                  ))}
                 </div>
               </div>
               <div className="btn-group">
@@ -53,9 +54,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   EN
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">FR</button>
-                  <button className="dropdown-item" type="button">AR</button>
-                  <button className="dropdown-item" type="button">RU</button>
+                  {dropdowns.language.map((item) => (
+                    <button key={item.value} className="dropdown-item" type="button">{item.label}</button>
+                  ))}
                 </div>
               </div>
             </div>
@@ -112,25 +113,22 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style={{ width: "calc(100% - 30px)", zIndex: 999 }}>
               <div className="navbar-nav w-100">
-                <div className="nav-item dropdown dropright">
-                  <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
-                    Dresses <i className="fa fa-angle-right float-right mt-1"></i>
-                  </a>
-                  <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                    <a href="#" className="dropdown-item">Men's Dresses</a>
-                    <a href="#" className="dropdown-item">Women's Dresses</a>
-                    <a href="#" className="dropdown-item">Baby's Dresses</a>
-                  </div>
-                </div>
-                <a href="#" className="nav-item nav-link">Shirts</a>
-                <a href="#" className="nav-item nav-link">Jeans</a>
-                <a href="#" className="nav-item nav-link">Swimwear</a>
-                <a href="#" className="nav-item nav-link">Sleepwear</a>
-                <a href="#" className="nav-item nav-link">Sportswear</a>
-                <a href="#" className="nav-item nav-link">Jumpsuits</a>
-                <a href="#" className="nav-item nav-link">Blazers</a>
-                <a href="#" className="nav-item nav-link">Jackets</a>
-                <a href="#" className="nav-item nav-link">Shoes</a>
+                {categories.map((category) => (
+                  category.hasDropdown ? (
+                    <div key={category.label} className="nav-item dropdown dropright">
+                      <a href={category.href} className="nav-link dropdown-toggle" data-toggle="dropdown">
+                        {category.label} <i className="fa fa-angle-right float-right mt-1"></i>
+                      </a>
+                      <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                        {category.subItems?.map((subItem) => (
+                          <a key={subItem.label} href={subItem.href} className="dropdown-item">{subItem.label}</a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <a key={category.label} href={category.href} className="nav-item nav-link">{category.label}</a>
+                  )
+                ))}
               </div>
             </nav>
           </div>
