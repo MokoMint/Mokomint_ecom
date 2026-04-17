@@ -11,6 +11,7 @@ function stockBadgeClass(status: string) {
 }
 
 export default function ProductCard({
+  id,
   title,
   description,
   image,
@@ -21,6 +22,7 @@ export default function ProductCard({
   detailsUrl,
 }: ProductCardProps) {
   const buyDisabled = stockStatus === "Out of Stock";
+  const detailHref = `/shop/${id}`;
 
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 pb-4">
@@ -35,7 +37,7 @@ export default function ProductCard({
           />
         </div>
         <div className="text-center py-4 px-3">
-          <Link href={detailsUrl} className="h6 text-decoration-none text-dark d-block mb-2 text-truncate">
+          <Link href={detailHref} className="h6 text-decoration-none text-dark d-block mb-2 text-truncate">
             {title}
           </Link>
           <p className="text-muted small mb-3">{description}</p>
@@ -61,7 +63,7 @@ export default function ProductCard({
             >
               {buyDisabled ? "Unavailable on Amazon" : "Buy on Amazon"}
             </a>
-            <Link href={detailsUrl} className="btn btn-outline-primary w-100 fw-semibold">
+            <Link href={detailHref} className="btn btn-outline-primary w-100 fw-semibold">
               More Details
             </Link>
           </div>
