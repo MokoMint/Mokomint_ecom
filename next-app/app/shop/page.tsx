@@ -1,41 +1,10 @@
 import ProductList from "../../components/ProductList";
 import ShopBreadcrumb from "../../components/ShopBreadcrumb";
 import ShopFilters from "../../components/ShopFilters";
+import { ProductData } from "../../types/types";
+import productsData from "../../mockData/products.json";
 
-const products = [
-  {
-    id: 1,
-    title: "Product 1",
-    image: "/img/product-1.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-  {
-    id: 2,
-    title: "Product 2",
-    image: "/img/product-2.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-  {
-    id: 3,
-    title: "Product 3",
-    image: "/img/product-3.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-  {
-    id: 4,
-    title: "Product 4",
-    image: "/img/product-4.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-];
+const products: ProductData[] = productsData as ProductData[];
 
 export default function ShopPage() {
   return (
