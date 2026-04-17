@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const pages = [
   { href: "/", label: "Home" },
@@ -17,7 +18,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <div className="container-fluid">
-        <div className="row bg-secondary py-1 px-xl-5">
+        {/* <div className="row bg-secondary py-1 px-xl-5">
           <div className="col-lg-6 d-none d-lg-block">
             <div className="d-inline-flex align-items-center h-100">
               <a className="text-body mr-3" href="#">About</a>
@@ -69,12 +70,18 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
           <div className="col-lg-4">
             <Link href="/" className="text-decoration-none">
-              <span className="h1 text-uppercase text-primary bg-dark px-2">Multi</span>
-              <span className="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Shop</span>
+              <Image
+                src="/img/Mokomint_logo.jpeg"
+                alt="Mokomint Logo"
+                width={240}
+                height={60}
+                style={{ objectFit: 'contain' }}
+                priority
+              />
             </Link>
           </div>
           <div className="col-lg-4 col-6 text-left">
@@ -130,8 +137,13 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <div className="col-lg-9">
             <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
               <Link href="/" className="text-decoration-none d-block d-lg-none">
-                <span className="h1 text-uppercase text-dark bg-light px-2">Multi</span>
-                <span className="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
+                <Image
+                  src="/img/Mokomint_logo.jpeg"
+                  alt="Mokomint Logo"
+                  width={200}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
               </Link>
               <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>
