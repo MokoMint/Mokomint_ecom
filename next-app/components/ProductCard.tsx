@@ -25,8 +25,7 @@ export default function ProductCard({
   const detailHref = `/shop/${id}`;
 
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12 pb-4">
-      <div className="product-item bg-light mb-4 shadow-sm">
+    <div className="product-item bg-light mb-4 shadow-sm">
         <div className="product-img position-relative overflow-hidden" style={{ height: 280 }}>
           <Image
             src={image}
@@ -69,6 +68,5 @@ export default function ProductCard({
           </div>
         </div>
       </div>
-    </div>
   );
 }
