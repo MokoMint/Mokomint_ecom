@@ -68,6 +68,10 @@ export default function HomeFeatures() {
                     {range: "14+", unit: "YEARS", bg: "#f5a2d5", color: "#271733", border: "#ed7fc5"},
                 ].map((item) => (
                     <div key={item.range} className="col-xl-2 col-lg-2 col-md-4 col-sm-6 d-flex justify-content-center">
+                        <Link
+                href={`/shop?age=${item.range}`}
+                style={{ textDecoration: "none" }}
+            >
                         <div
                             className="d-flex flex-column align-items-center justify-content-center"
                             style={{
@@ -88,6 +92,7 @@ export default function HomeFeatures() {
                                 {item.unit}
                             </span>
                         </div>
+                        </Link>
                     </div>
                 ))}
             </div>

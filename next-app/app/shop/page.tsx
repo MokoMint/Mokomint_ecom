@@ -14,8 +14,6 @@ export default async function ShopPage({ searchParams }: { searchParams: Promise
   const age = params.age as string;
 
   let filteredProducts = products;
-  console.log("filtering products with category:", params, filteredProducts);
-  debugger;
   if (category) {
     filteredProducts = filteredProducts.filter(p => p.category === category);
   }
