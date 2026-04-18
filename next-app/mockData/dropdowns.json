@@ -1,0 +1,62 @@
+{
+  "account": [
+    {
+      "label": "Sign in",
+      "href": "/signin"
+    },
+    {
+      "label": "Sign up",
+      "href": "/signup"
+    }
+  ],
+  "currency": [
+    {
+      "label": "USD",
+      "value": "USD"
+    },
+    {
+      "label": "EUR",
+      "value": "EUR"
+    },
+    {
+      "label": "GBP",
+      "value": "GBP"
+    },
+    {
+      "label": "CAD",
+      "value": "CAD"
+    }
+  ],
+  "language": [
+    {
+      "label": "EN",
+      "value": "EN"
+    },
+    {
+      "label": "FR",
+      "value": "FR"
+    },
+    {
+      "label": "AR",
+      "value": "AR"
+    },
+    {
+      "label": "RU",
+      "value": "RU"
+    }
+  ],
+  "sortOptions": [
+    {
+      "label": "Latest",
+      "value": "latest"
+    },
+    {
+      "label": "Popularity",
+      "value": "popularity"
+    },
+    {
+      "label": "Best Rating",
+      "value": "best-rating"
+    }
+  ]
+}

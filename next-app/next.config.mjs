@@ -10,6 +10,13 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.devtool = 'eval-source-map';
+    }
+    return config;
+  },
+  turbopack: {},
 };
 
 export default nextConfig;

@@ -1,0 +1,36 @@
+[
+  {
+    "href": "/",
+    "label": "Home"
+  },
+ 
+  {
+    "href": "/about",
+    "label": "About"
+  },
+  {
+    "href": "/bulkorder",
+    "label": "Bulk Orders"
+  },
+
+ 
+  {
+    "href": "/contact",
+    "label": "Contact"
+  }
+]
+
+
+//  {
+//     "href": "/shop",
+//     "label": "Shop"
+//   },
+   // {
+  //   "href": "/cart",
+  //   "label": "Shop Cart"
+  // },
+  // {
+  //   "href": "/checkout",
+  //   "label": "Checkout"
+  // },
+  

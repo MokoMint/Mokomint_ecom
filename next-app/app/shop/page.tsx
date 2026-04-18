@@ -1,46 +1,30 @@
 import ProductList from "../../components/ProductList";
 import ShopBreadcrumb from "../../components/ShopBreadcrumb";
 import ShopFilters from "../../components/ShopFilters";
+import { ProductData, DropdownsData } from "../../types/types";
+import productsData from "../../mockData/products.json";
+import dropdownsData from "../../mockData/dropdowns.json";
 
-const products = [
-  {
-    id: 1,
-    title: "Product 1",
-    image: "/img/product-1.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-  {
-    id: 2,
-    title: "Product 2",
-    image: "/img/product-2.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-  {
-    id: 3,
-    title: "Product 3",
-    image: "/img/product-3.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-  {
-    id: 4,
-    title: "Product 4",
-    image: "/img/product-4.jpg",
-    price: "$99.00",
-    oldPrice: "$123.00",
-    href: "#",
-  },
-];
+const products: ProductData[] = productsData as ProductData[];
+const dropdowns: DropdownsData = dropdownsData as DropdownsData;
 
-export default function ShopPage() {
+export default async function ShopPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const params = await searchParams;
+  const category = params.category as string;
+  const age = params.age as string;
+
+  let filteredProducts = products;
+  if (category) {
+    filteredProducts = filteredProducts.filter(p => p.category === category);
+  }
+  if (age) {
+    filteredProducts = filteredProducts.filter(p => p.ageRange === age);
+  }
+
+  const breadcrumbTitle = category ? category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : age ? `Age ${age}` : "Shop List";
   return (
     <div className="container-fluid">
-      <ShopBreadcrumb current="Shop List" />
+      <ShopBreadcrumb current={breadcrumbTitle} />
       <div className="row px-xl-5">
         <ShopFilters />
         <div className="col-lg-9 col-md-8">
@@ -57,16 +41,16 @@ export default function ShopPage() {
                       Sort by
                     </button>
                     <div className="dropdown-menu" aria-labelledby="sortMenu">
-                      <a className="dropdown-item" href="#">Latest</a>
-                      <a className="dropdown-item" href="#">Popularity</a>
-                      <a className="dropdown-item" href="#">Best Rating</a>
+                      {dropdowns.sortOptions.map((option) => (
+                        <a key={option.value} className="dropdown-item" href="#">{option.label}</a>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <ProductList products={products} />
+          <ProductList products={filteredProducts} />
           <div className="row">
             <div className="col-12">
               <nav>

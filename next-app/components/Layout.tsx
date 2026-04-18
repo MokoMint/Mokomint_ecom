@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { DropdownsData, NavigationItem, CategoryItem } from "../types/types";
+import dropdownsData from "../mockData/dropdowns.json";
+import navigationData from "../mockData/navigation.json";
+import categoriesData from "../mockData/categories.json";
 
-const pages = [
-  { href: "/", label: "Home" },
-  { href: "/shop", label: "Shop" },
-  { href: "/cart", label: "Shop Cart" },
-  { href: "/checkout", label: "Checkout" },
-  { href: "/contact", label: "Contact" },
-];
+const dropdowns: DropdownsData = dropdownsData as DropdownsData;
+const pages: NavigationItem[] = navigationData as NavigationItem[];
+const categories: CategoryItem[] = categoriesData as CategoryItem[];
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -34,8 +34,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   My Account
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">Sign in</button>
-                  <button className="dropdown-item" type="button">Sign up</button>
+                  {dropdowns.account.map((item) => (
+                    <Link key={item.href} href={item.href} className="dropdown-item">{item.label}</Link>
+                  ))}
                 </div>
               </div>
               <div className="btn-group mx-2">
@@ -43,9 +44,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   USD
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">EUR</button>
-                  <button className="dropdown-item" type="button">GBP</button>
-                  <button className="dropdown-item" type="button">CAD</button>
+                  {dropdowns.currency.map((item) => (
+                    <button key={item.value} className="dropdown-item" type="button">{item.label}</button>
+                  ))}
                 </div>
               </div>
               <div className="btn-group">
@@ -53,9 +54,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   EN
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">FR</button>
-                  <button className="dropdown-item" type="button">AR</button>
-                  <button className="dropdown-item" type="button">RU</button>
+                  {dropdowns.language.map((item) => (
+                    <button key={item.value} className="dropdown-item" type="button">{item.label}</button>
+                  ))}
                 </div>
               </div>
             </div>
@@ -112,25 +113,22 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style={{ width: "calc(100% - 30px)", zIndex: 999 }}>
               <div className="navbar-nav w-100">
-                <div className="nav-item dropdown dropright">
-                  <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
-                    Dresses <i className="fa fa-angle-right float-right mt-1"></i>
-                  </a>
-                  <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                    <a href="#" className="dropdown-item">Men's Dresses</a>
-                    <a href="#" className="dropdown-item">Women's Dresses</a>
-                    <a href="#" className="dropdown-item">Baby's Dresses</a>
-                  </div>
-                </div>
-                <a href="#" className="nav-item nav-link">Shirts</a>
-                <a href="#" className="nav-item nav-link">Jeans</a>
-                <a href="#" className="nav-item nav-link">Swimwear</a>
-                <a href="#" className="nav-item nav-link">Sleepwear</a>
-                <a href="#" className="nav-item nav-link">Sportswear</a>
-                <a href="#" className="nav-item nav-link">Jumpsuits</a>
-                <a href="#" className="nav-item nav-link">Blazers</a>
-                <a href="#" className="nav-item nav-link">Jackets</a>
-                <a href="#" className="nav-item nav-link">Shoes</a>
+                {categories.map((category) => (
+                  category.hasDropdown ? (
+                    <div key={category.label} className="nav-item dropdown dropright">
+                      <Link href={category.href} className="nav-link dropdown-toggle" data-toggle="dropdown">
+                        {category.label} <i className="fa fa-angle-right float-right mt-1"></i>
+                      </Link>
+                      <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                        {category.subItems?.map((subItem) => (
+                          <Link key={subItem.label} href={subItem.href} className="dropdown-item">{subItem.label}</Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link key={category.label} href={category.href} className="nav-item nav-link">{category.label}</Link>
+                  )
+                ))}
               </div>
             </nav>
           </div>
@@ -182,15 +180,15 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <div className="row px-xl-5 pt-5">
           <div className="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
             <h5 className="text-secondary text-uppercase mb-4">Get In Touch</h5>
-            <p className="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
+            <p className="mb-4">At MokoMint, we’re passionate about bringing joy and learning together through thoughtfully designed kids’ toys. Whether you have a question, feedback, or just want to say hello — we’d love to hear from you!</p>
             <p className="mb-2">
-              <i className="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA
+              <i className="fa fa-map-marker-alt text-primary mr-3"></i>Rangoli Garden, Jaipur, Rajasthan, India
             </p>
             <p className="mb-2">
-              <i className="fa fa-envelope text-primary mr-3"></i>info@example.com
+              <i className="fa fa-envelope text-primary mr-3"></i>mokomint.official@gmail.com
             </p>
             <p className="mb-0">
-              <i className="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890
+              <i className="fa fa-phone-alt text-primary mr-3"></i>+91 92512 64027
             </p>
           </div>
           <div className="col-lg-8 col-md-12">
@@ -242,7 +240,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <div className="row border-top mx-xl-5 py-4" style={{ borderColor: "rgba(256, 256, 256, .1) !important" }}>
           <div className="col-md-6 px-xl-0">
             <p className="mb-md-0 text-center text-md-left text-secondary">
-              &copy; <a className="text-primary" href="#">Domain</a>. All Rights Reserved. Designed by <a className="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+              &copy; <a className="text-primary" href="#">Domain</a>. All Rights Reserved. Designed by <a className="text-primary" href="https://mokomint.com">Moko Mint</a>
             </p>
           </div>
           <div className="col-md-6 px-xl-0 text-center text-md-right">
