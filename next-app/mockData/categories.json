@@ -1,28 +1,33 @@
 [
      {
     "label": "Wooden Puzzle",
-    "href": "#",
+    "href": "/shop?category=wooden-puzzle",
     "hasDropdown": false
    
   },
   {
     "label": "Return Gifts",
-    "href": "#",
+    "href": "/shop?category=return-gift",
     "hasDropdown": true,
     "subItems": [
       {
         "label": "Stylish Eraser",
-        "href": "#"
+        "href": "/shop?category=return-gift"
       },
       {
         "label": "Diaries & Notebooks",
-        "href": "#"
+        "href": "/shop?category=return-gift"
       },
       {
         "label": "Soft Toys",
-        "href": "#"
+        "href": "/shop?category=return-gift"
       }
     ]
+  },
+  {
+    "label": "Rubber Toys",
+    "href": "/shop?category=rubber",
+    "hasDropdown": false
   }
   
 ]

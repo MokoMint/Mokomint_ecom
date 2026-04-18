@@ -116,17 +116,17 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                 {categories.map((category) => (
                   category.hasDropdown ? (
                     <div key={category.label} className="nav-item dropdown dropright">
-                      <a href={category.href} className="nav-link dropdown-toggle" data-toggle="dropdown">
+                      <Link href={category.href} className="nav-link dropdown-toggle" data-toggle="dropdown">
                         {category.label} <i className="fa fa-angle-right float-right mt-1"></i>
-                      </a>
+                      </Link>
                       <div className="dropdown-menu position-absolute rounded-0 border-0 m-0">
                         {category.subItems?.map((subItem) => (
-                          <a key={subItem.label} href={subItem.href} className="dropdown-item">{subItem.label}</a>
+                          <Link key={subItem.label} href={subItem.href} className="dropdown-item">{subItem.label}</Link>
                         ))}
                       </div>
                     </div>
                   ) : (
-                    <a key={category.label} href={category.href} className="nav-item nav-link">{category.label}</a>
+                    <Link key={category.label} href={category.href} className="nav-item nav-link">{category.label}</Link>
                   )
                 ))}
               </div>

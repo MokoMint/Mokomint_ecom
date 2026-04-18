@@ -13,6 +13,8 @@ export type ProductData = {
   sizes: string[];
   colors: string[];
   reviewCount: number;
+  category: string;
+  ageRange: string;
 };
 
 export type DropdownItem = {

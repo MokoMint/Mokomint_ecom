@@ -8,10 +8,25 @@ import dropdownsData from "../../mockData/dropdowns.json";
 const products: ProductData[] = productsData as ProductData[];
 const dropdowns: DropdownsData = dropdownsData as DropdownsData;
 
-export default function ShopPage() {
+export default async function ShopPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const params = await searchParams;
+  const category = params.category as string;
+  const age = params.age as string;
+
+  let filteredProducts = products;
+  console.log("filtering products with category:", params, filteredProducts);
+  debugger;
+  if (category) {
+    filteredProducts = filteredProducts.filter(p => p.category === category);
+  }
+  if (age) {
+    filteredProducts = filteredProducts.filter(p => p.ageRange === age);
+  }
+
+  const breadcrumbTitle = category ? category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : age ? `Age ${age}` : "Shop List";
   return (
     <div className="container-fluid">
-      <ShopBreadcrumb current="Shop List" />
+      <ShopBreadcrumb current={breadcrumbTitle} />
       <div className="row px-xl-5">
         <ShopFilters />
         <div className="col-lg-9 col-md-8">
@@ -37,7 +52,7 @@ export default function ShopPage() {
               </div>
             </div>
           </div>
-          <ProductList products={products} />
+          <ProductList products={filteredProducts} />
           <div className="row">
             <div className="col-12">
               <nav>
