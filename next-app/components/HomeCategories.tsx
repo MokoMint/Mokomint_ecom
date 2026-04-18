@@ -1,15 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { ProductData } from "../types/types";
-import bestSellersData from "../mockData/bestSellers.json";
+import productsData from "../mockData/products.json";
 
-const bestSellers: ProductData[] = bestSellersData as ProductData[];
 const ITEMS_PER_SLIDE = 4;
 
 export default function HomeCategories() {
+  const [bestSellers, setBestSellers] = useState<ProductData[]>([]);
+
   const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    // Filter products to show only bestsellers
+    const filteredProducts = productsData.filter(
+      (product) => product.isBestSeller,
+    );
+    setBestSellers(filteredProducts as ProductData[]);
+  }, []);
   const totalSlides = Math.ceil(bestSellers.length / ITEMS_PER_SLIDE);
 
   const nextSlide = () => {
@@ -21,13 +29,16 @@ export default function HomeCategories() {
   };
 
   const startIndex = currentSlide * ITEMS_PER_SLIDE;
-  const visibleProducts = bestSellers.slice(startIndex, startIndex + ITEMS_PER_SLIDE);
+  const visibleProducts = bestSellers.slice(
+    startIndex,
+    startIndex + ITEMS_PER_SLIDE,
+  );
 
   return (
     <div className="container-fluid pt-5">
-       <div className="text-center mb-4">
-                <h2 className="section-title mb-3">Best Sellers</h2>
-            </div>
+      <div className="text-center mb-4">
+        <h2 className="section-title mb-3">Best Sellers</h2>
+      </div>
 
       {totalSlides > 1 && (
         <div className="d-flex justify-content-center mb-4">
@@ -61,9 +72,14 @@ export default function HomeCategories() {
           {Array.from({ length: totalSlides }, (_, index) => (
             <button
               key={index}
-              className={`btn mx-1 ${index === currentSlide ? 'btn-primary' : 'btn-outline-primary'}`}
+              className={`btn mx-1 ${index === currentSlide ? "btn-primary" : "btn-outline-primary"}`}
               onClick={() => setCurrentSlide(index)}
-              style={{ width: '12px', height: '12px', borderRadius: '50%', padding: 0 }}
+              style={{
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                padding: 0,
+              }}
             />
           ))}
         </div>
