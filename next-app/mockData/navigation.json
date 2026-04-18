@@ -3,20 +3,34 @@
     "href": "/",
     "label": "Home"
   },
+ 
   {
-    "href": "/shop",
-    "label": "Shop"
+    "href": "/about",
+    "label": "About"
   },
   {
-    "href": "/cart",
-    "label": "Shop Cart"
+    "href": "/bulk-orders",
+    "label": "Bulk Orders"
   },
-  {
-    "href": "/checkout",
-    "label": "Checkout"
-  },
+
+ 
   {
     "href": "/contact",
     "label": "Contact"
   }
 ]
+
+
+//  {
+//     "href": "/shop",
+//     "label": "Shop"
+//   },
+   // {
+  //   "href": "/cart",
+  //   "label": "Shop Cart"
+  // },
+  // {
+  //   "href": "/checkout",
+  //   "label": "Checkout"
+  // },
+  
