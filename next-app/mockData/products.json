@@ -5,7 +5,11 @@
     "description": "Alphabet puzzle for children.",
     "fullDescription": "This wooden alphabet puzzle helps children learn letters with bright colors, large pieces, and durable construction.",
     "information": "Material: Wood, Age: 3+, Includes 26 letter pieces and a storage tray.",
-    "image": "/img/wooden/alphabet/first_alphabet.png",
+    "images": [
+      { "url": "/img/wooden/alphabet/first_alphabet.png", "sequence": 1 },
+      { "url": "/img/wooden/alphabet/second_alphabet.png", "sequence": 2 },
+      { "url": "/img/wooden/alphabet/third_alphabet.png", "sequence": 3 }
+    ],
     "price": 89.00,
     "oldPrice": 119.00,
     "stockStatus": "In Stock",
@@ -24,7 +28,11 @@
     "description": "Hindi vowel puzzle for children.",
     "fullDescription": "A colorful vowel puzzle designed for early Hindi alphabet learning, featuring easy-to-handle wooden pieces.",
     "information": "Material: Wood, Age: 3+, Includes vowel cards and matching sounds.",
-    "image": "/img/wooden/hindi/first_hindi.png",
+    "images": [
+      { "url": "/img/wooden/hindi/first_hindi.png", "sequence": 1 },
+      { "url": "/img/wooden/hindi/second_hindi.png", "sequence": 2 },
+      { "url": "/img/wooden/hindi/third_hindi.png", "sequence": 3 }
+    ],
     "price": 49.00,
     "oldPrice": 69.00,
     "stockStatus": "Low Stock",
@@ -43,7 +51,11 @@
     "description": "Fruit puzzle for children.",
     "fullDescription": "A fun fruit-themed puzzle set that helps young kids identify fruits while improving motor skills.",
     "information": "Material: Wood, Age: 2+, Includes 12 fruit pieces and puzzle board.",
-    "image": "/img/wooden/fruit/first_fruit.png",
+    "images": [
+      { "url": "/img/wooden/fruit/first_fruit.png", "sequence": 1 },
+      { "url": "/img/wooden/fruit/second_fruit.png", "sequence": 2 },
+      { "url": "/img/wooden/fruit/third_fruit.png", "sequence": 3 }
+    ],
     "price": 39.00,
     "oldPrice": 55.00,
     "stockStatus": "In Stock",
@@ -62,7 +74,11 @@
     "description": "Vegetable puzzle for children.",
     "fullDescription": "A vegetable puzzle with bright pieces that teach children about healthy foods and colors.",
     "information": "Material: Wood, Age: 2+, Includes 12 vegetable pieces and tray.",
-    "image": "/img/wooden/veg/first_veg.png",
+    "images": [
+      { "url": "/img/wooden/veg/first_veg.png", "sequence": 1 },
+      { "url": "/img/wooden/veg/second_veg.png", "sequence": 2 },
+      { "url": "/img/wooden/veg/third_veg.png", "sequence": 3 }
+    ],
     "price": 29.00,
     "oldPrice": 39.00,
     "stockStatus": "Out of Stock",
@@ -81,7 +97,11 @@
     "description": "Bouncy rubber ball for children.",
     "fullDescription": "A durable rubber ball perfect for outdoor play and developing motor skills.",
     "information": "Material: Rubber, Age: 2+, Safe and non-toxic.",
-    "image": "/img/return_gift/chocolate_diary/first_chocolate_diary.png",
+    "images": [
+      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
+      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
+      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
+    ],
     "price": 15.00,
     "oldPrice": 20.00,
     "stockStatus": "In Stock",
@@ -100,7 +120,11 @@
     "description": "Rubber duck toy for bath time.",
     "fullDescription": "A classic rubber duck that floats and squeaks for fun bath time play.",
     "information": "Material: Rubber, Age: 1+, Floats and squeaks.",
-    "image": "/img/return_gift/chocolate_diary/first_chocolate_diary.png",
+    "images": [
+      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
+      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
+      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
+    ],
     "price": 10.00,
     "oldPrice": 15.00,
     "stockStatus": "Low Stock",
@@ -119,7 +143,11 @@
     "description": "Beautiful return gift box for special occasions.",
     "fullDescription": "An elegant gift box containing assorted toys and treats, perfect as a return gift.",
     "information": "Material: Cardboard, Age: 3+, Includes puzzles and candies.",
-    "image": "/img/return_gift/chocolate_diary/first_chocolate_diary.png",
+    "images": [
+      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
+      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
+      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
+    ],
     "price": 25.00,
     "oldPrice": 35.00,
     "stockStatus": "In Stock",
@@ -138,7 +166,11 @@
     "description": "Puzzle set as return gift.",
     "fullDescription": "A small puzzle set inside a gift box, ideal for return gifts at events.",
     "information": "Material: Wood, Age: 4+, Includes 50 pieces.",
-    "image": "/img/return_gift/chocolate_diary/first_chocolate_diary.png",
+    "images": [
+      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
+      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
+      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
+    ],
     "price": 20.00,
     "oldPrice": 30.00,
     "stockStatus": "Out of Stock",

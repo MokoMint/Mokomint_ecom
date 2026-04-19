@@ -18,7 +18,7 @@ export default function ProductCard({
   id,
   title,
   description,
-  image,
+  images,
   price,
   oldPrice,
   stockStatus,
@@ -28,6 +28,12 @@ export default function ProductCard({
   const buyDisabled = stockStatus === "Out of Stock";
   const detailHref = `/shop/${id}`;
 
+  // Get the first image (sequence 1) or use placeholder
+  const mainImage =
+    images && images.length > 0
+      ? images.find((img) => img.sequence === 1)?.url || images[0].url
+      : "/img/placeholder.png";
+
   return (
     <div className="product-item bg-light mb-4 shadow-sm">
       <div
@@ -35,7 +41,7 @@ export default function ProductCard({
         style={{ height: 280 }}
       >
         <Image
-          src={image}
+          src={mainImage}
           alt={title}
           fill
           style={{ objectFit: "cover" }}

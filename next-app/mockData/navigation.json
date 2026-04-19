@@ -17,6 +17,10 @@
   {
     "href": "/contact",
     "label": "Contact"
+  },
+  {
+    "href": "/cart",
+    "label": "Shop Cart"
   }
 ]
 

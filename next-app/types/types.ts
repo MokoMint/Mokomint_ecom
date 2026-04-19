@@ -1,10 +1,15 @@
+export type ProductImage = {
+  url: string;
+  sequence: number;
+};
+
 export type ProductData = {
   id: number;
   title: string;
   description: string;
   fullDescription: string;
   information: string;
-  image: string;
+  images: ProductImage[];
   price: number;
   oldPrice?: number;
   stockStatus: "In Stock" | "Low Stock" | "Out of Stock";

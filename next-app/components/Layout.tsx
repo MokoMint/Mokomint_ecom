@@ -269,18 +269,6 @@ export default function SiteLayout({
                   <Link href="#" className="text-secondary mb-2">
                     <i className="fa fa-angle-right mr-2"></i>Our Shop
                   </Link>
-                  <Link href="#" className="text-secondary mb-2">
-                    <i className="fa fa-angle-right mr-2"></i>Shop Detail
-                  </Link>
-                  <Link href="#" className="text-secondary mb-2">
-                    <i className="fa fa-angle-right mr-2"></i>Shopping Cart
-                  </Link>
-                  <Link href="#" className="text-secondary mb-2">
-                    <i className="fa fa-angle-right mr-2"></i>Checkout
-                  </Link>
-                  <Link href="#" className="text-secondary">
-                    <i className="fa fa-angle-right mr-2"></i>Contact Us
-                  </Link>
                 </div>
               </div>
               <div className="col-md-4 mb-5">
@@ -288,24 +276,22 @@ export default function SiteLayout({
                   My Account
                 </h5>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link href="#" className="text-secondary mb-2">
+                  <Link href="/about" className="text-secondary">
+                    <i className="fa fa-angle-right mr-2"></i>About Us
+                  </Link>
+                  <Link href="/contact" className="text-secondary">
+                    <i className="fa fa-angle-right mr-2"></i>Contact Us
+                  </Link>
+                  {/* <Link href="#" className="text-secondary mb-2">
                     <i className="fa fa-angle-right mr-2"></i>Home
                   </Link>
                   <Link href="#" className="text-secondary mb-2">
                     <i className="fa fa-angle-right mr-2"></i>Our Shop
                   </Link>
-                  <Link href="#" className="text-secondary mb-2">
-                    <i className="fa fa-angle-right mr-2"></i>Shop Detail
-                  </Link>
-                  <Link href="#" className="text-secondary mb-2">
-                    <i className="fa fa-angle-right mr-2"></i>Shopping Cart
-                  </Link>
-                  <Link href="#" className="text-secondary mb-2">
-                    <i className="fa fa-angle-right mr-2"></i>Checkout
-                  </Link>
+
                   <Link href="#" className="text-secondary">
                     <i className="fa fa-angle-right mr-2"></i>Contact Us
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className="col-md-4 mb-5">
