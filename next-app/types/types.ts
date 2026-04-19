@@ -5,8 +5,8 @@ export type ProductData = {
   fullDescription: string;
   information: string;
   image: string;
-  price: string;
-  oldPrice?: string;
+  price: number;
+  oldPrice?: number;
   stockStatus: "In Stock" | "Low Stock" | "Out of Stock";
   amazonUrl: string;
   detailsUrl: string;
@@ -23,11 +23,19 @@ export type DropdownItem = {
   href?: string;
 };
 
+export type PriceFilter = {
+  id: string;
+  label: string;
+  min: number | null;
+  max: number | null;
+};
+
 export type DropdownsData = {
   account: DropdownItem[];
   currency: DropdownItem[];
   language: DropdownItem[];
   sortOptions: DropdownItem[];
+  priceFilters: PriceFilter[];
 };
 
 export type NavigationItem = {
