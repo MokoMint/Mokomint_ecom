@@ -7,6 +7,7 @@ import { DropdownsData, NavigationItem, CategoryItem } from "../types/types";
 import dropdownsData from "../mockData/dropdowns.json";
 import navigationData from "../mockData/navigation.json";
 import categoriesData from "../mockData/categories.json";
+import BottomTicker from "./Ticker";
 
 const dropdowns: DropdownsData = dropdownsData as DropdownsData;
 const pages: NavigationItem[] = navigationData as NavigationItem[];
@@ -206,7 +207,7 @@ export default function SiteLayout({
                   ))}
                 </div>
                 <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
-                  <a href="#" className="btn px-0">
+                  {/* <a href="#" className="btn px-0">
                     <i className="fas fa-heart text-primary"></i>
                     <span
                       className="badge text-secondary border border-secondary rounded-circle"
@@ -223,7 +224,7 @@ export default function SiteLayout({
                     >
                       0
                     </span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </nav>
@@ -232,6 +233,13 @@ export default function SiteLayout({
       </div>
 
       <main>{children}</main>
+      <new-marquee speed="40" direction="left" pauseonhover="true">
+        <div class="flex gap-10">
+          <span>🚚 Free Delivery above ₹2999</span>
+          <span>🎁 Free Gifts above ₹4999</span>
+          <span>📦 Opening video required for claims</span>
+        </div>
+      </new-marquee>
 
       <div className="container-fluid bg-dark text-secondary mt-5 pt-5">
         <div className="row px-xl-5 pt-5">

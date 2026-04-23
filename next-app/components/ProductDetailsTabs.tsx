@@ -10,7 +10,11 @@ type ProductDetailsTabsProps = {
   reviewCount: number;
 };
 
-export default function ProductDetailsTabs({ fullDescription, information, reviewCount }: ProductDetailsTabsProps) {
+export default function ProductDetailsTabs({
+  fullDescription,
+  information,
+  reviewCount,
+}: ProductDetailsTabsProps) {
   const [activeTab, setActiveTab] = useState<TabKey>("description");
 
   return (
@@ -31,13 +35,13 @@ export default function ProductDetailsTabs({ fullDescription, information, revie
           >
             Information
           </button>
-          <button
+          {/* <button
             type="button"
             className={`nav-item nav-link ${activeTab === "reviews" ? "active" : ""}`}
             onClick={() => setActiveTab("reviews")}
           >
             Reviews ({reviewCount})
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="bg-white p-4 border">
@@ -53,12 +57,12 @@ export default function ProductDetailsTabs({ fullDescription, information, revie
             <p className="text-muted">{information}</p>
           </div>
         )}
-        {activeTab === "reviews" && (
+        {/* {activeTab === "reviews" && (
           <div>
             <h4>Customer Reviews</h4>
             <p className="text-muted">No reviews yet. Be the first to review this product.</p>
           </div>
-        )}
+        )} */}
       </div>
     </>
   );
