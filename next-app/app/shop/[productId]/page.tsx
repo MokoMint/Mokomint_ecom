@@ -98,38 +98,6 @@ export default async function ProductDetailPage({
             {/* Description */}
             <p className="text-muted mb-4">{product.description}</p>
 
-            {/* Sizes */}
-            <div className="mb-3">
-              <strong>Size:</strong>
-              <div className="d-flex flex-wrap gap-2 mt-2">
-                {product.sizes.map((size) => (
-                  <button
-                    key={size}
-                    type="button"
-                    className="btn btn-outline-secondary btn-sm"
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Colors */}
-            <div className="mb-4">
-              <strong>Color:</strong>
-              <div className="d-flex flex-wrap gap-2 mt-2">
-                {product.colors.map((color) => (
-                  <button
-                    key={color}
-                    type="button"
-                    className="btn btn-outline-secondary btn-sm"
-                  >
-                    {color}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {/* Stock Status */}
             <div className="mb-3">
               <span
@@ -160,23 +128,6 @@ export default async function ProductDetailPage({
                 className="btn btn-outline-primary btn-lg flex-fill"
               >
                 Buy on Amazon
-              </a>
-            </div>
-
-            {/* Share */}
-            <div className="d-flex gap-3 align-items-center">
-              <span className="font-weight-bold">Share on:</span>
-              <a className="text-secondary" href="#">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a className="text-secondary" href="#">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a className="text-secondary" href="#">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a className="text-secondary" href="#">
-                <i className="fab fa-pinterest"></i>
               </a>
             </div>
           </div>

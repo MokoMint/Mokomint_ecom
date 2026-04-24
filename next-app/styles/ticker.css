@@ -1,0 +1,10 @@
+.ticker-container {
+  background-color: #A7C95B; /* Blue */
+margin: 10px 0;
+}
+.ticker-container .marquee-content {
+  display: flex;
+  gap: 2.5rem; /* Adjust gap between items */
+  font-weight: 500; /* Medium weight */
+  color:#40A8DF;
+}
