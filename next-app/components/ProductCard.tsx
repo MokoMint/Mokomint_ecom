@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ProductData } from "../types/types";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/slices/cartSlice";
+import { toast } from "react-toastify";
 
 export type ProductCardProps = ProductData;
 
@@ -54,7 +55,7 @@ export default function ProductCard({
         fullDescription: "",
       }),
     );
-    alert("Product added to cart!");
+    toast.success("Product added to cart!");
   };
 
   return (

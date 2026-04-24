@@ -2,6 +2,8 @@ import "./globals.css";
 import Script from "next/script";
 import SiteLayout from "../components/Layout";
 import { StoreProvider } from "../providers/StoreProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: "Mokomint",
@@ -37,6 +39,7 @@ export default function RootLayout({
         <StoreProvider>
           <SiteLayout>{children}</SiteLayout>
         </StoreProvider>
+        <ToastContainer position="top-right" autoClose={3000} theme="light" />
         <Script
           src="https://code.jquery.com/jquery-3.4.1.min.js"
           strategy="beforeInteractive"

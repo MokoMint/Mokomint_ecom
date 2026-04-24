@@ -8,6 +8,8 @@ import dropdownsData from "../mockData/dropdowns.json";
 import navigationData from "../mockData/navigation.json";
 import categoriesData from "../mockData/categories.json";
 import Ticker from "./Ticker";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 const dropdowns: DropdownsData = dropdownsData as DropdownsData;
 const pages: NavigationItem[] = navigationData as NavigationItem[];
@@ -19,7 +21,10 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-
+  const { items, totalPrice } = useSelector((state: RootState) => state.cart);
+  const totalItemCount = items.reduce((count, item) => {
+    return count + item.quantity;
+  }, 0);
   return (
     <>
       <div className="container-fluid">
@@ -207,24 +212,15 @@ export default function SiteLayout({
                   ))}
                 </div>
                 <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
-                  {/* <a href="#" className="btn px-0">
-                    <i className="fas fa-heart text-primary"></i>
-                    <span
-                      className="badge text-secondary border border-secondary rounded-circle"
-                      style={{ paddingBottom: 2 }}
-                    >
-                      0
-                    </span>
-                  </a>
-                  <a href="#" className="btn px-0 ml-3">
+                  <Link href="/cart" className="btn px-0 ml-3">
                     <i className="fas fa-shopping-cart text-primary"></i>
                     <span
                       className="badge text-secondary border border-secondary rounded-circle"
                       style={{ paddingBottom: 2 }}
                     >
-                      0
+                      {totalItemCount}
                     </span>
-                  </a> */}
+                  </Link>
                 </div>
               </div>
             </nav>
