@@ -35,13 +35,6 @@ export default function ProductDetailsTabs({
           >
             Information
           </button>
-          {/* <button
-            type="button"
-            className={`nav-item nav-link ${activeTab === "reviews" ? "active" : ""}`}
-            onClick={() => setActiveTab("reviews")}
-          >
-            Reviews ({reviewCount})
-          </button> */}
         </div>
       </div>
       <div className="bg-white p-4 border">

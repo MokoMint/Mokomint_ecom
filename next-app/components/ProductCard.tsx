@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ProductData } from "../types/types";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/slices/cartSlice";
 
 export type ProductCardProps = ProductData;
 
@@ -11,7 +15,7 @@ function stockBadgeClass(status: string) {
 }
 
 function formatPrice(price: number): string {
-  return `$${price.toFixed(2)}`;
+  return `₹${price.toFixed(2)}`;
 }
 
 export default function ProductCard({
@@ -25,6 +29,7 @@ export default function ProductCard({
   amazonUrl,
   detailsUrl,
 }: ProductCardProps) {
+  const dispatch = useDispatch();
   const buyDisabled = stockStatus === "Out of Stock";
   const detailHref = `/shop/${id}`;
 
@@ -33,6 +38,24 @@ export default function ProductCard({
     images && images.length > 0
       ? images.find((img) => img.sequence === 1)?.url || images[0].url
       : "/img/placeholder.png";
+
+  const handleAddToCart = () => {
+    dispatch(
+      addToCart({
+        id,
+        title,
+        description,
+        images,
+        price,
+        oldPrice,
+        stockStatus,
+        amazonUrl,
+        detailsUrl,
+        fullDescription: "",
+      }),
+    );
+    alert("Product added to cart!");
+  };
 
   return (
     <div className="product-item bg-light mb-4 shadow-sm">
@@ -68,6 +91,14 @@ export default function ProductCard({
           {stockStatus}
         </span>
         <div className="d-flex flex-column gap-2">
+          <button
+            onClick={handleAddToCart}
+            disabled={buyDisabled}
+            className={`btn btn-success w-100 text-white fw-bold ${buyDisabled ? "disabled" : ""}`}
+            style={{ boxShadow: "0 10px 25px rgba(40, 167, 69, 0.25)" }}
+          >
+            {buyDisabled ? "Out of Stock" : "Add to Cart"}
+          </button>
           <a
             href={amazonUrl}
             target="_blank"

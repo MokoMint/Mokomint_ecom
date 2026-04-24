@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from "next/script";
 import SiteLayout from "../components/Layout";
+import { StoreProvider } from "../providers/StoreProvider";
 
 export const metadata = {
   title: "Mokomint",
@@ -33,13 +34,19 @@ export default function RootLayout({
         <link rel="icon" href="/img/favicon.ico" />
       </head>
       <body>
-        <SiteLayout>{children}</SiteLayout>
+        <StoreProvider>
+          <SiteLayout>{children}</SiteLayout>
+        </StoreProvider>
         <Script
           src="https://code.jquery.com/jquery-3.4.1.min.js"
           strategy="beforeInteractive"
         />
         <Script
           src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/lib/owlcarousel/owl.carousel.min.js"
           strategy="beforeInteractive"
         />
         <Script src="/js/main.js" strategy="afterInteractive" />
