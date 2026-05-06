@@ -51,7 +51,7 @@ export default async function ShopPage({
       <div className="row px-xl-5">
         <ShopFilters products={products} currentPriceFilter={priceFilter} />
         <div className="col-lg-9 col-md-8">
-          <div className="row pb-3">
+          {/* <div className="row pb-3">
             <div className="col-12 pb-1">
               <div className="d-flex align-items-center justify-content-between mb-4">
                 <div>
@@ -89,7 +89,7 @@ export default async function ShopPage({
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <ProductList products={filteredProducts} />
           <div className="row">
             <div className="col-12">

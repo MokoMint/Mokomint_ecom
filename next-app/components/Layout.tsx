@@ -98,11 +98,11 @@ export default function SiteLayout({
           <div className="col-lg-4 col-6 text-left">
             <form>
               <div className="input-group">
-                <input
+                {/* <input
                   type="text"
                   className="form-control"
                   placeholder="Search for products"
-                />
+                /> */}
                 <div className="input-group-append">
                   <span className="input-group-text bg-transparent text-primary">
                     <i className="fa fa-search"></i>
@@ -229,7 +229,7 @@ export default function SiteLayout({
       </div>
 
       <main>{children}</main>
-      <Ticker />
+      {/* <Ticker /> */}
       {/* <new-marquee speed="40" direction="left" pauseonhover="true">
         <div className="flex gap-10">
           <span>🚚 Free Delivery above ₹2999</span>
@@ -346,10 +346,11 @@ export default function SiteLayout({
           <div className="col-md-6 px-xl-0">
             <p className="mb-md-0 text-center text-md-left text-secondary">
               &copy;{" "}
-              <a className="text-primary" href="#">
+              {/* <a className="text-primary" href="#">
                 Domain
               </a>
-              . All Rights Reserved. Designed by{" "}
+              .  */}
+              All Rights Reserved. Designed by{" "}
               <a className="text-primary" href="https://mokomint.com">
                 Moko Mint
               </a>
