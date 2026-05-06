@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "Alphabet",
     "description": "Alphabet puzzle for children.",
     "fullDescription": "This wooden alphabet puzzle helps children learn letters with bright colors, large pieces, and durable construction.",
@@ -24,7 +24,7 @@
     "isBestSeller": true
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "Hindi Vowel",
     "description": "Hindi vowel puzzle for children.",
     "fullDescription": "A colorful vowel puzzle designed for early Hindi alphabet learning, featuring easy-to-handle wooden pieces.",
@@ -48,7 +48,7 @@
     "isBestSeller": true
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "Fruit Puzzle",
     "description": "Fruit puzzle for children.",
     "fullDescription": "A fun fruit-themed puzzle set that helps young kids identify fruits while improving motor skills.",
@@ -71,7 +71,7 @@
     "isBestSeller": true
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "Vegetable Puzzle",
     "description": "Vegetable puzzle for children.",
     "fullDescription": "A vegetable puzzle with bright pieces that teach children about healthy foods and colors.",
@@ -94,7 +94,7 @@
     "isBestSeller": true
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "Rubber Ball",
     "description": "Bouncy rubber ball for children.",
     "fullDescription": "A durable rubber ball perfect for outdoor play and developing motor skills.",
@@ -117,7 +117,7 @@
     "isBestSeller": true
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "Rubber Duck",
     "description": "Rubber duck toy for bath time.",
     "fullDescription": "A classic rubber duck that floats and squeaks for fun bath time play.",
@@ -140,7 +140,7 @@
     "isBestSeller": false
   },
   {
-    "id": 7,
+    "id": "7",
     "title": "Return Gift Box",
     "description": "Beautiful return gift box for special occasions.",
     "fullDescription": "An elegant gift box containing assorted toys and treats, perfect as a return gift.",
@@ -163,7 +163,7 @@
     "isBestSeller": false
   },
   {
-    "id": 8,
+    "id": "8",
     "title": "Return Gift Puzzle",
     "description": "Puzzle set as return gift.",
     "fullDescription": "A small puzzle set inside a gift box, ideal for return gifts at events.",

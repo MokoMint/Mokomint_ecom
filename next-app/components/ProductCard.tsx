@@ -53,6 +53,12 @@ export default function ProductCard({
         amazonUrl,
         detailsUrl,
         fullDescription: "",
+        information: "",
+        sizes: [],
+        colors: [],
+        reviewCount: 0,
+        category: "",
+        ageRange: "",
       }),
     );
     toast.success("Product added to cart!");

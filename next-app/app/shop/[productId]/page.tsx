@@ -8,10 +8,10 @@ import ProductGallery from "../../../components/ProductGallery";
 const products: ProductData[] = productsData as ProductData[];
 
 export function generateStaticParams() {
-  return products.map((product) => ({ productId: product.id.toString() }));
+  return products.map((product) => ({ productId: product.id }));
 }
 
-function getProductById(id: number) {
+function getProductById(id: string) {
   return products.find((product) => product.id === id);
 }
 
@@ -21,10 +21,7 @@ export default async function ProductDetailPage({
   params: Promise<{ productId: string }>;
 }) {
   const { productId } = await params;
-  const productIdNumber = Number(productId);
-  const product = Number.isNaN(productIdNumber)
-    ? null
-    : getProductById(productIdNumber);
+  const product = getProductById(productId);
 
   if (!product) {
     notFound();

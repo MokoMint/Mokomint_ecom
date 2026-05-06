@@ -4,7 +4,7 @@ export type ProductImage = {
 };
 
 export type ProductData = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   fullDescription: string;
