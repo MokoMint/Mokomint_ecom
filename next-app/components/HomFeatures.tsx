@@ -49,8 +49,8 @@ export default function HomeFeatures() {
           <div className="product-offer mb-30" style={{ height: "200px" }}>
             <img className="img-fluid" src="img/moko_offer1.png" alt="" />
             <div className="offer-text">
-              {/* <h6 className="text-white text-uppercase">Save 20%</h6>
-                        <h3 className="text-white mb-3">Special Offer</h3> */}
+              {/* <h6 className="text-white text-uppercase">Save 20%</h6> */}
+              <h3 className="text-white mb-3">Return Gift</h3>
               {/* <a href="" className="btn btn-primary">Shop Now</a> */}
               <Link
                 href="/shop?category=return-gift"
@@ -65,11 +65,11 @@ export default function HomeFeatures() {
           <div className="product-offer mb-30" style={{ height: "200px" }}>
             <img className="img-fluid" src="img/moko_offer2.png" alt="" />
             <div className="offer-text">
-              <h6 className="text-white text-uppercase">Save 20%</h6>
-              <h3 className="text-white mb-3">Special Offer</h3>
+              {/* <h6 className="text-white text-uppercase">Save 20%</h6> */}
+              <h3 className="text-white mb-3">Wooden Puzzle</h3>
               {/* <a href="" className="btn btn-primary">Shop Now</a> */}
               <Link
-                href="/shop?category=return-gift"
+                href="/shop?category=wooden-puzzle"
                 className="btn btn-primary"
               >
                 Shop Now
