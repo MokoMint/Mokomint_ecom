@@ -16,14 +16,14 @@ export default function AboutPage() {
 
       {/* STORY */}
       <div className="row align-items-center mb-5">
-        <div className="col-md-6">
+        {/* <div className="col-md-6">
           <img
             src="/images/about-toys.jpg"
             alt="Mokomint toys"
             className="img-fluid rounded shadow"
           />
-        </div>
-        <div className="col-md-6">
+        </div> */}
+        <div className="col-md-12">
           <h3 className="fw-bold mb-3">Our Story</h3>
           <p className="text-muted">
             Mokomint started with a simple idea — to create meaningful play
