@@ -19,7 +19,6 @@ export default function BulkOrderPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(form);
 
     // Open WhatsApp with form data
     window.open(whatsappLink, "_blank");

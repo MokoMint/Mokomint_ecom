@@ -84,7 +84,8 @@ export default function SiteLayout({
         </div> */}
         <div
           className="row align-items-center py-3 px-xl-5 d-none d-lg-flex"
-          style={{ backgroundColor: "#f5f1ea" }}
+          style={{ backgroundColor: "#ffffff" }}
+          // f5f1ea
         >
           <div className="col-lg-4">
             <Link href="/" className="text-decoration-none">
