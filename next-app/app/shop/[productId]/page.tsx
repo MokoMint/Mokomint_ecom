@@ -30,6 +30,11 @@ export default async function ProductDetailPage({
   // Format price helper
   const formatPrice = (price: number) => `$${price.toFixed(2)}`;
 
+  function stockBadgeClass(status: string) {
+    if (status === "In Stock") return "bg-success text-white";
+    if (status === "Low Stock") return "bg-warning text-dark";
+    return "bg-danger text-white";
+  }
   // Get product images sorted by sequence
   const productImages =
     product.images && product.images.length > 0
@@ -73,12 +78,12 @@ export default async function ProductDetailPage({
             <h2 className="mb-3 font-weight-bold">{product.title}</h2>
 
             {/* Rating */}
-            <div className="mb-3">
+            {/* <div className="mb-3">
               <span className="text-warning mr-2">★★★★★</span>
               <span className="text-muted">
                 ({product.reviewCount} Reviews)
               </span>
-            </div>
+            </div> */}
 
             {/* Price */}
             <div className="d-flex align-items-center mb-3 gap-3">
@@ -97,7 +102,7 @@ export default async function ProductDetailPage({
 
             {/* Stock Status */}
             <div className="mb-3">
-              <span
+              {/* <span
                 className={`badge ${
                   product.stockStatus === "In Stock"
                     ? "bg-success"
@@ -105,6 +110,11 @@ export default async function ProductDetailPage({
                       ? "bg-warning"
                       : "bg-danger"
                 }`}
+              >
+                {product.stockStatus}
+              </span> */}
+              <span
+                className={`badge ${stockBadgeClass(product.stockStatus)} mb-3`}
               >
                 {product.stockStatus}
               </span>

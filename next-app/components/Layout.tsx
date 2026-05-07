@@ -82,7 +82,10 @@ export default function SiteLayout({
             </div>
           </div>
         </div> */}
-        <div className="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+        <div
+          className="row align-items-center py-3 px-xl-5 d-none d-lg-flex"
+          style={{ backgroundColor: "#f5f1ea" }}
+        >
           <div className="col-lg-4">
             <Link href="/" className="text-decoration-none">
               <Image
@@ -103,11 +106,11 @@ export default function SiteLayout({
                   className="form-control"
                   placeholder="Search for products"
                 /> */}
-                <div className="input-group-append">
+                {/* <div className="input-group-append">
                   <span className="input-group-text bg-transparent text-primary">
                     <i className="fa fa-search"></i>
                   </span>
-                </div>
+                </div> */}
               </div>
             </form>
           </div>
@@ -118,7 +121,7 @@ export default function SiteLayout({
         </div>
       </div>
 
-      <div className="container-fluid bg-dark mb-30">
+      <div className="container-fluid bg-dark mb-1">
         <div className="row px-xl-5">
           <div className="col-lg-3 d-none d-lg-block">
             <a
@@ -148,6 +151,11 @@ export default function SiteLayout({
                         href={category.href}
                         className="nav-link dropdown-toggle"
                         data-toggle="dropdown"
+                        onClick={() => {
+                          document
+                            .getElementById("navbar-vertical")
+                            ?.classList.remove("show");
+                        }}
                       >
                         {category.label}{" "}
                         <i className="fa fa-angle-right float-right mt-1"></i>
@@ -158,6 +166,11 @@ export default function SiteLayout({
                             key={subItem.label}
                             href={subItem.href}
                             className="dropdown-item"
+                            onClick={() => {
+                              document
+                                .getElementById("navbar-vertical")
+                                ?.classList.remove("show");
+                            }}
                           >
                             {subItem.label}
                           </Link>
@@ -169,6 +182,11 @@ export default function SiteLayout({
                       key={category.label}
                       href={category.href}
                       className="nav-item nav-link"
+                      onClick={() => {
+                        document
+                          .getElementById("navbar-vertical")
+                          ?.classList.remove("show");
+                      }}
                     >
                       {category.label}
                     </Link>
@@ -271,7 +289,7 @@ export default function SiteLayout({
                   <Link href="#" className="text-secondary mb-2">
                     <i className="fa fa-angle-right mr-2"></i>Home
                   </Link>
-                  <Link href="#" className="text-secondary mb-2">
+                  <Link href="/shop" className="text-secondary mb-2">
                     <i className="fa fa-angle-right mr-2"></i>Our Shop
                   </Link>
                 </div>
@@ -300,7 +318,7 @@ export default function SiteLayout({
                 </div>
               </div>
               <div className="col-md-4 mb-5">
-                <h5 className="text-secondary text-uppercase mb-4">
+                {/* <h5 className="text-secondary text-uppercase mb-4">
                   Newsletter
                 </h5>
                 <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
@@ -317,23 +335,40 @@ export default function SiteLayout({
                       </button>
                     </div>
                   </div>
-                </form>
+                </form> */}
                 <h6 className="text-secondary text-uppercase mt-4 mb-3">
                   Follow Us
                 </h6>
                 <div className="d-flex">
-                  <a className="btn btn-primary btn-square mr-2" href="#">
+                  <Link
+                    href="https://x.com/Mokomintstore"
+                    className="fa fa-angle-right mr-2 btn btn-primary btn-square mr-2"
+                    target="_blank"
+                  >
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-primary btn-square mr-2" href="#">
+                  </Link>
+
+                  <Link
+                    href="https://www.facebook.com/profile.php?id=61588319053726"
+                    className="fa fa-angle-right mr-2 btn btn-primary btn-square mr-2"
+                    target="_blank"
+                  >
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-primary btn-square mr-2" href="#">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                  <a className="btn btn-primary btn-square" href="#">
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/@MokoMint_official"
+                    className="fa fa-angle-right mr-2 btn btn-primary btn-square mr-2"
+                    target="_blank"
+                  >
+                    <i className="fab fa-youtube"></i>
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/mokomint_official/"
+                    className="fa fa-angle-right mr-2 btn btn-primary btn-square"
+                    target="_blank"
+                  >
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -356,9 +391,9 @@ export default function SiteLayout({
               </a>
             </p>
           </div>
-          <div className="col-md-6 px-xl-0 text-center text-md-right">
+          {/* <div className="col-md-6 px-xl-0 text-center text-md-right">
             <img className="img-fluid" src="/img/payments.png" alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
 

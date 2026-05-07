@@ -20,14 +20,35 @@ export default function BulkOrderPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(form);
+
+    // Open WhatsApp with form data
+    window.open(whatsappLink, "_blank");
+
     alert("Bulk inquiry submitted!");
   };
 
-  const message = `Hi Mokomint,
-  Name: ${form.name}
-  Phone: ${form.phone}
-  Quantity: ${form.quantity}
-  Message: ${form.message}`;
+  const message = `Hi Mokomint! 
+
+I am interested in placing a bulk order for your educational wooden toys.
+
+ *Order Inquiry Details:*
+• Name: ${form.name}
+• Phone: ${form.phone}
+• Email: ${form.email || "Not provided"}
+• Quantity Required: ${form.quantity} units
+• Specific Requirements: ${form.message || "As per catalog"}
+
+Please provide me with:
+ • Pricing details for bulk quantity
+ • Available customization options (logo print, branding)
+ • Estimated delivery timeline
+ • Payment terms and MOQ (Minimum Order Quantity)
+ • Product catalog and available options
+
+Looking forward to your response!
+
+Thanks,
+${form.name}`;
 
   const whatsappLink = `https://wa.me/919251264027?text=${encodeURIComponent(message)}`;
 

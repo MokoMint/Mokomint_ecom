@@ -1,13 +1,11 @@
-import { ProductData } from "../types/types";
+"use client";
 
-const priceFilters = [
-  { id: "price-all", label: "All Price", min: null, max: null },
-  { id: "price-1", label: "Below $100", min: 0, max: 100 },
-  { id: "price-2", label: "$100 - $200", min: 100, max: 200 },
-  { id: "price-3", label: "$200 - $300", min: 200, max: 300 },
-  { id: "price-4", label: "$300 - $400", min: 300, max: 400 },
-  { id: "price-5", label: "Above $400", min: 400, max: null },
-];
+import { ProductData, DropdownsData } from "../types/types";
+import { useRouter } from "next/navigation";
+import dropdownsData from "../mockData/dropdowns.json";
+
+const dropdowns: DropdownsData = dropdownsData as DropdownsData;
+const priceFilters = dropdowns.priceFilters;
 
 const colors = ["Black", "White", "Red", "Blue", "Green", "Yellow"];
 
@@ -31,7 +29,20 @@ export default function ShopFilters({
   products,
   currentPriceFilter,
 }: ShopFiltersProps) {
+  const router = useRouter();
   const selectedFilter = currentPriceFilter || "price-all";
+
+  const handlePriceFilterChange = (filterId: string) => {
+    const params = new URLSearchParams(window.location.search);
+
+    if (filterId === "price-all") {
+      params.delete("price");
+    } else {
+      params.set("price", filterId);
+    }
+
+    router.push(`/shop?${params.toString()}`);
+  };
 
   return (
     <div className="col-lg-3 col-md-4">
@@ -48,7 +59,8 @@ export default function ShopFilters({
               <input
                 type="checkbox"
                 className="custom-control-input"
-                defaultChecked={filter.id === selectedFilter}
+                checked={filter.id === selectedFilter}
+                onChange={() => handlePriceFilterChange(filter.id)}
                 id={filter.id}
               />
               <label className="custom-control-label" htmlFor={filter.id}>

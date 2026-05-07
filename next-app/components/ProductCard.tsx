@@ -66,18 +66,20 @@ export default function ProductCard({
 
   return (
     <div className="product-item bg-light mb-4 shadow-sm">
-      <div
-        className="product-img position-relative overflow-hidden"
-        style={{ height: 280 }}
-      >
-        <Image
-          src={mainImage}
-          alt={title}
-          fill
-          style={{ objectFit: "cover" }}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
+      <Link href={detailHref} className="text-decoration-none">
+        <div
+          className="product-img position-relative overflow-hidden"
+          style={{ height: 280 }}
+        >
+          <Image
+            src={mainImage}
+            alt={title}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+      </Link>
       <div className="text-center py-4 px-3">
         <Link
           href={detailHref}
@@ -116,12 +118,12 @@ export default function ProductCard({
           >
             {buyDisabled ? "Unavailable on Amazon" : "Buy on Amazon"}
           </a>
-          <Link
+          {/* <Link
             href={detailHref}
             className="btn btn-outline-primary w-100 fw-semibold"
           >
             More Details
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

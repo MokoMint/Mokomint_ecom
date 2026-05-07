@@ -64,8 +64,8 @@ export default function AboutPage() {
       {/* STATS */}
       <div className="row text-center mb-5">
         {[
-          { number: "10K+", label: "Happy Customers" },
-          { number: "50+", label: "Products" },
+          { number: "5K+", label: "Happy Customers" },
+          { number: "20+", label: "Products" },
           { number: "4.8★", label: "Customer Rating" },
           { number: "100%", label: "Safe Materials" },
         ].map((item, index) => (

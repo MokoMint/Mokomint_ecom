@@ -4,11 +4,19 @@ import Image from "next/image";
 export default function HomeHero() {
   return (
     <div className="container-fluid mb-3">
-      <div className="row px-xl-2">
+      <div className="row ">
         <div className="col-lg-12">
-          <div id="header-carousel" className="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
+          <div
+            id="header-carousel"
+            className="carousel slide carousel-fade mb-30 mb-lg-0"
+            data-ride="carousel"
+          >
             <ol className="carousel-indicators">
-              <li data-target="#header-carousel" data-slide-to="0" className="active"></li>
+              <li
+                data-target="#header-carousel"
+                data-slide-to="0"
+                className="active"
+              ></li>
               <li data-target="#header-carousel" data-slide-to="1"></li>
               <li data-target="#header-carousel" data-slide-to="2"></li>
             </ol>
@@ -18,19 +26,22 @@ export default function HomeHero() {
                   src: "/img/moko_carousel1.png",
                   alt: "Men Fashion",
                   title: "Men Fashion",
-                  description: "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
+                  description:
+                    "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
                 },
                 {
                   src: "/img/moko_carousel2.png",
                   alt: "Women Fashion",
                   title: "Women Fashion",
-                  description: "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
+                  description:
+                    "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
                 },
                 {
                   src: "/img/moko_carousel3.png",
                   alt: "Accessories",
                   title: "Accessories",
-                  description: "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
+                  description:
+                    "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
                 },
               ].map((slide, index) => (
                 <div

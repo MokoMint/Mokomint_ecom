@@ -18,13 +18,21 @@ export default async function ShopPage({
   const age = params.age as string;
   const priceFilter = params.price as string;
 
-  let filteredProducts = products;
+  // Products filtered by category/age only (for filter counts)
+  let categoryFilteredProducts = products;
   if (category) {
-    filteredProducts = filteredProducts.filter((p) => p.category === category);
+    categoryFilteredProducts = categoryFilteredProducts.filter(
+      (p) => p.category === category,
+    );
   }
   if (age) {
-    filteredProducts = filteredProducts.filter((p) => p.ageRange === age);
+    categoryFilteredProducts = categoryFilteredProducts.filter(
+      (p) => p.ageRange === age,
+    );
   }
+
+  // Products filtered by category/age AND price (for display)
+  let filteredProducts = categoryFilteredProducts;
   if (priceFilter && priceFilter !== "price-all") {
     const selectedFilter = dropdowns.priceFilters.find(
       (f) => f.id === priceFilter,
@@ -49,7 +57,10 @@ export default async function ShopPage({
     <div className="container-fluid">
       <ShopBreadcrumb current={breadcrumbTitle} />
       <div className="row px-xl-5">
-        <ShopFilters products={products} currentPriceFilter={priceFilter} />
+        <ShopFilters
+          products={categoryFilteredProducts}
+          currentPriceFilter={priceFilter}
+        />
         <div className="col-lg-9 col-md-8">
           {/* <div className="row pb-3">
             <div className="col-12 pb-1">
@@ -91,7 +102,7 @@ export default async function ShopPage({
             </div>
           </div> */}
           <ProductList products={filteredProducts} />
-          <div className="row">
+          {/* <div className="row">
             <div className="col-12">
               <nav>
                 <ul className="pagination justify-content-center">
@@ -123,7 +134,7 @@ export default async function ShopPage({
                 </ul>
               </nav>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
