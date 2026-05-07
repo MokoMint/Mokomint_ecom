@@ -4,6 +4,7 @@ import ProductDetailsTabs from "../../../components/ProductDetailsTabs";
 import { ProductData } from "../../../types/types";
 import productsData from "../../../mockData/products.json";
 import ProductGallery from "../../../components/ProductGallery";
+import AddToCartButton from "../../../components/AddToCartButton";
 
 const products: ProductData[] = productsData as ProductData[];
 
@@ -35,6 +36,7 @@ export default async function ProductDetailPage({
     if (status === "Low Stock") return "bg-warning text-dark";
     return "bg-danger text-white";
   }
+
   // Get product images sorted by sequence
   const productImages =
     product.images && product.images.length > 0
@@ -122,12 +124,14 @@ export default async function ProductDetailPage({
 
             {/* Action Buttons */}
             <div className="d-flex gap-2 mb-3">
-              <button
+              {/* <button
+                onClick={handleAddToCart}
                 type="button"
                 className="btn btn-warning btn-lg text-white flex-fill"
               >
                 Add To Cart
-              </button>
+              </button> */}
+              <AddToCartButton product={product} />
               <a
                 href={product.amazonUrl}
                 target="_blank"
