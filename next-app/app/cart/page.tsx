@@ -15,8 +15,52 @@ export default function CartPage() {
   const { items, totalPrice } = useSelector((state: RootState) => state.cart);
 
   const shipping = items.length > 0 ? 99 : 0;
-  const tax = Math.round(totalPrice * 0.18);
-  const grandTotal = totalPrice + shipping + tax;
+  // const tax = Math.round(totalPrice * 0.18);
+  // const grandTotal = totalPrice + shipping; // + tax
+  const grandTotal = totalPrice; // + tax
+  const generateWhatsAppMessage = () => {
+    let itemsText = items
+      .map(
+        (item) =>
+          `  • ${item.title}\n    Qty: ${item.quantity} x ₹${item.price.toFixed(2)} = ₹${(item.price * item.quantity).toFixed(2)}`,
+      )
+      .join("\n");
+
+    const message = `Hi Mokomint! 
+
+I would like to proceed with the following order:
+
+ *Order Summary:*
+${itemsText}
+
+*Pricing Breakdown:*
+• Subtotal: ₹${totalPrice.toFixed(2)}
+• Shipping: ₹0
+• Grand Total: ₹${grandTotal.toFixed(2)}
+
+Please confirm:
+• Payment method options
+• Order confirmation
+
+Thank you!`;
+
+    return message;
+  };
+
+  const handleCheckout = () => {
+    const whatsappLink = `https://wa.me/919251264027?text=${encodeURIComponent(generateWhatsAppMessage())}`;
+    window.open(whatsappLink, "_blank");
+  };
+
+  const handleClearCart = () => {
+    if (
+      window.confirm(
+        "Are you sure you want to clear your cart? This action cannot be undone.",
+      )
+    ) {
+      dispatch(clearCart());
+    }
+  };
 
   if (items.length === 0) {
     return (
@@ -153,7 +197,7 @@ export default function CartPage() {
           </table>
         </div>
         <div className="col-lg-4">
-          <form className="mb-30" action="">
+          {/* <form className="mb-30" action="">
             <div className="input-group">
               <input
                 type="text"
@@ -166,7 +210,7 @@ export default function CartPage() {
                 </button>
               </div>
             </div>
-          </form>
+          </form> */}
           <div className="card border-secondary mb-5">
             <div className="card-header bg-secondary border-0">
               <h4 className="font-weight-semi-bold m-0">Cart Summary</h4>
@@ -178,12 +222,28 @@ export default function CartPage() {
               </div>
               <div className="d-flex justify-content-between mb-3 pt-1">
                 <h6 className="font-weight-medium">Shipping</h6>
-                <h6 className="font-weight-medium">₹{shipping.toFixed(2)}</h6>
+                {/* <h6 className="font-weight-medium">
+                  ₹0 <del>{shipping.toFixed(2)}</del>
+                  {shipping.toFixed(2)}
+                  
+                </h6> */}
+                <div className="text-end">
+                  <h6 className="font-weight-medium mb-0">₹0</h6>
+
+                  <small
+                    style={{
+                      color: "#b0b0b0",
+                      textDecoration: "line-through",
+                    }}
+                  >
+                    ₹{shipping.toFixed(2)}
+                  </small>
+                </div>
               </div>
-              <div className="d-flex justify-content-between mb-3 pt-1">
+              {/* <div className="d-flex justify-content-between mb-3 pt-1">
                 <h6 className="font-weight-medium">Tax (18%)</h6>
                 <h6 className="font-weight-medium">₹{tax.toFixed(2)}</h6>
-              </div>
+              </div> */}
               <hr />
               <div className="d-flex justify-content-between mb-3 pt-1">
                 <h6 className="font-weight-medium">Total</h6>
@@ -191,13 +251,16 @@ export default function CartPage() {
               </div>
             </div>
             <div className="card-footer border-secondary bg-transparent">
-              <button className="btn btn-block btn-primary my-3 py-3">
+              <button
+                className="btn btn-block btn-primary my-3 py-3"
+                onClick={handleCheckout}
+              >
                 Proceed To Checkout
               </button>
               <button
                 type="button"
                 className="btn btn-block btn-outline-danger my-2 py-2"
-                onClick={() => dispatch(clearCart())}
+                onClick={handleClearCart}
               >
                 Clear Cart
               </button>

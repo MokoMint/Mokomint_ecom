@@ -166,7 +166,7 @@ ${form.name}`;
         {/* <a href="tel:+919999999999" className="btn btn-dark">
           Call Now
         </a> */}
-        <a
+        {/* <a
           // href="https://wa.me/+919711972036?text=Hi%20Mokomint,%20I%20want%20bulk%20order%20details"
           href={whatsappLink}
           target="_blank"
@@ -174,7 +174,7 @@ ${form.name}`;
           className="btn btn-dark"
         >
           Chat on WhatsApp
-        </a>
+        </a> */}
       </div>
     </div>
   );
