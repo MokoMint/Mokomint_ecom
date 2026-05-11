@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.set-artifact.outputs.artifact-name }}
-          path: ./next-app/.next
+          path: ./next-app/.next/
           retention-days: 60
 
   approval:
@@ -83,7 +83,7 @@ jobs:
           & $scriptPath -StorageAccount $env:AZURE_STORAGE_ACCOUNT `
                         -ContainerName $env:AZURE_STORAGE_CONTAINER `
                         -BackupFolderName $env:AZURE_BACKUP_FOLDER `
-                        -SourcePath ".\out"
+                        -SourcePath ".\next-app\.next"
 
       - name: Verify deployment
         shell: pwsh
