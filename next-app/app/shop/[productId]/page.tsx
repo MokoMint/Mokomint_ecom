@@ -91,7 +91,8 @@ export default async function ProductDetailPage({
             <div className="d-flex align-items-center mb-3 gap-3">
               <h3 className="text-primary mb-0 font-weight-bold">
                 {formatPrice(product.price)}
-              </h3> &nbsp;&nbsp;
+              </h3>{" "}
+              &nbsp;&nbsp;
               {product.oldPrice ? (
                 <h5 className="text-muted mb-0">
                   <del>{formatPrice(product.oldPrice)}</del>
@@ -101,6 +102,16 @@ export default async function ProductDetailPage({
 
             {/* Description */}
             <p className="text-muted mb-4">{product.description}</p>
+
+            {/* What's in the Box */}
+            {product.whatIsInTheBox && (
+              <div className="mb-4">
+                <h5>What's in the Box</h5>
+                <div
+                  dangerouslySetInnerHTML={{ __html: product.whatIsInTheBox }}
+                ></div>
+              </div>
+            )}
 
             {/* Stock Status */}
             <div className="mb-3">

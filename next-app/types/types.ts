@@ -20,6 +20,7 @@ export type ProductData = {
   reviewCount: number;
   category: string;
   ageRange: string;
+  whatIsInTheBox: string;
 };
 
 export type DropdownItem = {
