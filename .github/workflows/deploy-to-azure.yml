@@ -33,14 +33,14 @@ jobs:
 
       - name: Set artifact name
         id: set-artifact
-        run: echo "artifact-name=static-site-$(date +%s)" >> $GITHUB_OUTPUT
+        run: echo "artifact-name=static-site-${{ github.run_id }}" >> $GITHUB_OUTPUT
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.set-artifact.outputs.artifact-name }}
           path: ./next-app/out
-          retention-days: 1
+          retention-days: 60
 
   approval:
     runs-on: ubuntu-latest
