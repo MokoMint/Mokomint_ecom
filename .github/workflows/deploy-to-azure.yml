@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.set-artifact.outputs.artifact-name }}
-          path: ./next-app/out
+          path: ./next-app/.next
           retention-days: 60
 
   approval:
@@ -64,7 +64,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.build.outputs.artifact-name }}
-          path: ./out
+          path: ./next-app/.next
 
       - name: Azure CLI Login
         uses: azure/login@v1
