@@ -5,7 +5,9 @@ import { ProductData, DropdownsData } from "../../types/types";
 import productsData from "../../mockData/products.json";
 import dropdownsData from "../../mockData/dropdowns.json";
 
-const products: ProductData[] = productsData as ProductData[];
+const products: ProductData[] = (productsData as ProductData[]).filter(
+  (p) => p.isEnabled !== false,
+);
 const dropdowns: DropdownsData = dropdownsData as DropdownsData;
 
 export default async function ShopPage({

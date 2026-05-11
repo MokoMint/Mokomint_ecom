@@ -21,6 +21,7 @@ export type ProductData = {
   category: string;
   ageRange: string;
   whatIsInTheBox: string;
+  isEnabled?: boolean;
 };
 
 export type DropdownItem = {

@@ -12,9 +12,9 @@ export default function HomeCategories() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
-    // Filter products to show only bestsellers
+    // Filter products to show only bestsellers that are enabled
     const filteredProducts = productsData.filter(
-      (product) => product.isBestSeller,
+      (product) => product.isBestSeller && product.isEnabled !== false,
     );
     setBestSellers(filteredProducts as ProductData[]);
   }, []);

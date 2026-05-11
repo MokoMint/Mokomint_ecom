@@ -6,7 +6,9 @@ import productsData from "../../../mockData/products.json";
 import ProductGallery from "../../../components/ProductGallery";
 import AddToCartButton from "../../../components/AddToCartButton";
 
-const products: ProductData[] = productsData as ProductData[];
+const products: ProductData[] = (productsData as ProductData[]).filter(
+  (p) => p.isEnabled !== false,
+);
 
 export function generateStaticParams() {
   return products.map((product) => ({ productId: product.id }));
