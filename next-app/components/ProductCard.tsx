@@ -89,7 +89,7 @@ export default function ProductCard({
         </Link>
         <p className="text-muted small mb-3">{description}</p>
         <div className="d-flex align-items-center justify-content-center mb-3 gap-2">
-          <h5 className="text-primary mb-0">{formatPrice(price)}</h5>
+          <h5 className="text-primary mb-0">{formatPrice(price)}&nbsp;&nbsp;</h5>
           {oldPrice ? (
             <h6 className="text-muted mb-0">
               <del>{formatPrice(oldPrice)}</del>

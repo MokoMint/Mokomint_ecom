@@ -29,7 +29,7 @@ export default async function ProductDetailPage({
   }
 
   // Format price helper
-  const formatPrice = (price: number) => `$${price.toFixed(2)}`;
+  const formatPrice = (price: number) => `₹${price.toFixed(2)}`;
 
   function stockBadgeClass(status: string) {
     if (status === "In Stock") return "bg-success text-white";
@@ -91,7 +91,7 @@ export default async function ProductDetailPage({
             <div className="d-flex align-items-center mb-3 gap-3">
               <h3 className="text-primary mb-0 font-weight-bold">
                 {formatPrice(product.price)}
-              </h3>
+              </h3> &nbsp;&nbsp;
               {product.oldPrice ? (
                 <h5 className="text-muted mb-0">
                   <del>{formatPrice(product.oldPrice)}</del>
