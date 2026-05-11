@@ -73,7 +73,6 @@ export default function HomeHero() {
             </div>
           </div>
         </div>
-        {/* //test */}
         {/* <div className="col-lg-4">
           {[
             {
