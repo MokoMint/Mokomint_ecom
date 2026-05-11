@@ -30,6 +30,7 @@ const AddToCartButton = ({ product }: AddToCartButtonProps) => {
         reviewCount: 0,
         category: "",
         ageRange: "",
+        whatIsInTheBox: "",
       }),
     );
     toast.success("Product added to cart!");

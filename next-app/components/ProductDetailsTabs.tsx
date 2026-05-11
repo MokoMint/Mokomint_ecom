@@ -41,7 +41,10 @@ export default function ProductDetailsTabs({
         {activeTab === "description" && (
           <div>
             <h4>Product Description</h4>
-            <p className="text-muted">{fullDescription}</p>
+            <p
+              className="text-muted"
+              dangerouslySetInnerHTML={{ __html: fullDescription }}
+            ></p>
           </div>
         )}
         {activeTab === "information" && (
