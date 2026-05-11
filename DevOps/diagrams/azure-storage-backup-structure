@@ -1,0 +1,28 @@
+flowchart LR
+    A["🪣 Azure Storage Container"] 
+    A --> B["📄 Live Website Files<br/>current version"]
+    A --> C["📁 backup folder"]
+    
+    C --> D["📦 backup1<br/>First deployment backup"]
+    C --> E["📦 backup2<br/>Second deployment backup"]
+    C --> F["📦 backup3<br/>Third deployment backup"]
+    C --> G["📦 ...]"]
+    
+    B -->|New Deploy| H["Backup1 Created"]
+    H -->|Next Deploy| I["Backup2 Created"]
+    I -->|Next Deploy| J["Backup3 Created"]
+    
+    D -->|If needed| K["🔄 Restore to Live"]
+    E -->|If needed| K
+    F -->|If needed| K
+    
+    G -->|>30 days old| L["🗑️ Auto Deleted"]
+    
+    style A fill:#2196F3,color:#fff
+    style B fill:#4CAF50,color:#fff
+    style C fill:#FF9800,color:#fff
+    style D fill:#9C27B0,color:#fff
+    style E fill:#9C27B0,color:#fff
+    style F fill:#9C27B0,color:#fff
+    style K fill:#F44336,color:#fff
+    style L fill:#757575,color:#fff

@@ -1,0 +1,46 @@
+graph TB
+    subgraph Created["✅ CREATED & CONFIGURED"]
+        WF["GitHub Actions Workflow<br/>.github/workflows/<br/>deploy-to-azure.yml"]
+        BDS["Backup & Deploy Script<br/>scripts/<br/>backup-and-deploy.ps1"]
+        MGS["Management Script<br/>scripts/<br/>manage-storage.ps1"]
+        CFG["Updated Config<br/>next.config.mjs<br/>output: export"]
+    end
+    
+    subgraph Docs["📚 DOCUMENTATION"]
+        QR["QUICK_REFERENCE.md<br/>⚡ 3 min read"]
+        SC["SETUP_CHECKLIST.md<br/>✅ Step-by-step"]
+        DS["DEPLOYMENT_SETUP.md<br/>📖 Complete guide"]
+        SR["scripts/README.md<br/>🔧 Script docs"]
+        TR["TROUBLESHOOTING.md<br/>🔍 Issue fixes"]
+        IS["IMPLEMENTATION_SUMMARY.md<br/>🏗️ Architecture"]
+        IDX["INDEX.md<br/>📋 Navigation"]
+    end
+    
+    subgraph Features["✨ KEY FEATURES"]
+        F1["Automated Build<br/>Next.js Static Export"]
+        F2["Approval Gate<br/>Manual Review Required"]
+        F3["Auto Backup<br/>backup/backup1, 2, 3..."]
+        F4["One-Click Restore<br/>Any Previous Version"]
+        F5["Auto Cleanup<br/>30-day Retention"]
+    end
+    
+    subgraph Status["🎯 STATUS"]
+        S1["✅ Production Ready"]
+        S2["⏱️ Setup: 60-90 min"]
+        S3["🚀 Ready to Deploy"]
+    end
+    
+    Created --> Docs
+    Created --> Features
+    Features --> Status
+    
+    style Created fill:#4CAF50,color:#fff,stroke:#2E7D32,stroke-width:3px
+    style Docs fill:#2196F3,color:#fff,stroke:#1565C0,stroke-width:3px
+    style Features fill:#FF9800,color:#fff,stroke:#E65100,stroke-width:3px
+    style Status fill:#9C27B0,color:#fff,stroke:#6A1B9A,stroke-width:3px
+    style WF fill:#81C784,color:#fff
+    style BDS fill:#81C784,color:#fff
+    style MGS fill:#81C784,color:#fff
+    style CFG fill:#81C784,color:#fff
+    style S1 fill:#2E7D32,color:#fff,font-weight:bold
+    style S3 fill:#2E7D32,color:#fff,font-weight:bold

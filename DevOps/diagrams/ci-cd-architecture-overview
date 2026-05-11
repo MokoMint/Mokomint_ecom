@@ -1,0 +1,45 @@
+graph TB
+    subgraph GitHub["GitHub Repository"]
+        CODE["Code<br/>next-app/"]
+        WORKFLOW[".github/workflows/<br/>deploy-to-azure.yml"]
+        SCRIPTS["scripts/<br/>backup-and-deploy.ps1<br/>manage-storage.ps1"]
+        DOCS["Documentation<br/>DEPLOYMENT_SETUP.md<br/>QUICK_REFERENCE.md"]
+    end
+    
+    subgraph GHA["GitHub Actions"]
+        BUILD["Build Job<br/>• Install deps<br/>• Next.js build<br/>• Create artifact"]
+        APPROVAL["Approval Job<br/>• Production env<br/>• Manual review<br/>• Gate deployment"]
+        DEPLOY["Deploy Job<br/>• Download artifact<br/>• Run backup script<br/>• Upload files"]
+    end
+    
+    subgraph AZURE["Azure"]
+        SA["Storage Account<br/>yourstorageaccount"]
+        CONTAINER["Container<br/>website"]
+        LIVE["Live Website Files<br/>index.html, etc."]
+        BACKUP["Backup Folder<br/>backup/backup1<br/>backup/backup2<br/>..."]
+    end
+    
+    subgraph MANAGEMENT["Local Management"]
+        PSM["manage-storage.ps1<br/>• ListBackups<br/>• RestoreBackup<br/>• DeleteBackup<br/>• ViewBackupSize"]
+        USER["👤 Developer/Admin"]
+    end
+    
+    CODE --> WORKFLOW
+    WORKFLOW --> BUILD
+    BUILD --> APPROVAL
+    APPROVAL --> |Approved| DEPLOY
+    WORKFLOW --> SCRIPTS
+    DEPLOY --> SA
+    SA --> CONTAINER
+    CONTAINER --> LIVE
+    CONTAINER --> BACKUP
+    USER --> PSM
+    PSM --> SA
+    
+    style GitHub fill:#2196F3,color:#fff,stroke:#1565C0,stroke-width:2px
+    style GHA fill:#4CAF50,color:#fff,stroke:#33691E,stroke-width:2px
+    style AZURE fill:#FF9800,color:#fff,stroke:#E65100,stroke-width:2px
+    style MANAGEMENT fill:#9C27B0,color:#fff,stroke:#4A148C,stroke-width:2px
+    style BUILD fill:#81C784,color:#fff
+    style APPROVAL fill:#FFB74D,color:#000
+    style DEPLOY fill:#64B5F6,color:#fff

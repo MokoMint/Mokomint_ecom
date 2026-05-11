@@ -1,0 +1,116 @@
+name: Deploy to Azure Storage
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-name: ${{ steps.set-artifact.outputs.artifact-name }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'next-app/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: './next-app'
+        run: npm ci
+
+      - name: Build Next.js static site
+        working-directory: './next-app'
+        run: npm run build
+
+      - name: Set artifact name
+        id: set-artifact
+        run: echo "artifact-name=static-site-$(date +%s)" >> $GITHUB_OUTPUT
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.set-artifact.outputs.artifact-name }}
+          path: ./next-app/out
+          retention-days: 1
+
+  approval:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: Production
+    
+    steps:
+      - name: Manual Approval Confirmed
+        run: echo "✅ Deployment approved and proceeding to Azure Storage"
+
+  deploy:
+    runs-on: windows-latest
+    needs: [build, approval]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact-name }}
+          path: ./out
+
+      - name: Azure CLI Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Backup existing content and deploy
+        shell: pwsh
+        env:
+          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          AZURE_STORAGE_CONTAINER: ${{ secrets.AZURE_STORAGE_CONTAINER }}
+          AZURE_BACKUP_FOLDER: backup
+        run: |
+          # Source the backup and deploy script
+          $scriptPath = Join-Path $PWD "scripts" "backup-and-deploy.ps1"
+          & $scriptPath -StorageAccount $env:AZURE_STORAGE_ACCOUNT `
+                        -ContainerName $env:AZURE_STORAGE_CONTAINER `
+                        -BackupFolderName $env:AZURE_BACKUP_FOLDER `
+                        -SourcePath ".\out"
+
+      - name: Verify deployment
+        shell: pwsh
+        env:
+          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          AZURE_STORAGE_CONTAINER: ${{ secrets.AZURE_STORAGE_CONTAINER }}
+        run: |
+          $storageContext = (Get-AzStorageAccount -ResourceGroupName ${{ secrets.AZURE_RESOURCE_GROUP }} `
+                             -Name $env:AZURE_STORAGE_ACCOUNT).Context
+          
+          $blobList = Get-AzStorageBlob -Container $env:AZURE_STORAGE_CONTAINER -Context $storageContext | `
+                      Where-Object { $_.Name -notlike "backup/*" } | Measure-Object
+          
+          Write-Output "✅ Successfully deployed $($blobList.Count) files to Azure Storage"
+
+      - name: Logout from Azure
+        run: az logout
+
+      - name: Deployment Summary
+        if: success()
+        run: |
+          Write-Output "
+          ========================================
+          ✅ DEPLOYMENT SUCCESSFUL
+          ========================================
+          Storage Account: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          Container: ${{ secrets.AZURE_STORAGE_CONTAINER }}
+          Deployment ID: ${{ github.run_id }}
+          Timestamp: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+          ========================================"
