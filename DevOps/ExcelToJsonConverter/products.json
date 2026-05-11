@@ -1,0 +1,70 @@
+﻿[
+    {
+        "id":  "1",
+        "isEnabled":  true,
+        "title":  "A-Z Alphabet ",
+        "description":  "MokoMint Wooden Alphabet Puzzle for Toddlers with Easy-Grip Knobs ",
+        "fullDescription":  "Little Puzzle, Big Learning: The Premium Wooden Alphabet Board \\n\\nGive your child a head start with our Premium Wooden Alphabet Board, designed ",
+        "Information":  "Material: Wood, Age: 2+, Includes 26 alphabet pieces and a storage board ",
+        "Images":  [
+                       {
+                           "url":  "/img/a.jpg",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/b.jpg",
+                           "sequence":  2
+                       }
+                   ],
+        "price":  179,
+        "oldPrice":  299,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0GZDD8Z78 ",
+        "sizes":  [
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue"
+                   ],
+        "modelNumber":  "MM-WP-101A "
+    },
+    {
+        "id":  "2",
+        "isEnabled":  true,
+        "title":  "A-Z Alphabet ",
+        "description":  "MokoMint Wooden Alphabet Puzzle for Toddlers with Easy-Grip Knobs ",
+        "fullDescription":  "Little Puzzle, Big Learning: The Premium Wooden Alphabet Board \\n\\nGive your child a head start with our Premium Wooden Alphabet Board, designed ",
+        "Information":  "Material: Wood, Age: 2+, Includes 26 alphabet pieces and a storage board ",
+        "Images":  [
+                       {
+                           "url":  "/img/a.jpg",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/b.jpg",
+                           "sequence":  2
+                       }
+                   ],
+        "price":  179,
+        "oldPrice":  299,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0GZDD8Z78 ",
+        "sizes":  [
+                      "S",
+                      "M",
+                      "L",
+                      "XL",
+                      "XXL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue",
+                       "Green"
+                   ],
+        "modelNumber":  "MM-WP-101A "
+    }
+]
