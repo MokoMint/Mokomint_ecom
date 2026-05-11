@@ -88,7 +88,18 @@ export default function ProductCard({
         >
           {title}
         </Link>
-        <p className="text-muted small mb-3">{description}</p>
+        <p
+          className="text-muted small mb-3"
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            minHeight: "2.5em",
+          }}
+        >
+          {description}
+        </p>
         <div className="d-flex align-items-center justify-content-center mb-3 gap-2">
           <h5 className="text-primary mb-0">
             {formatPrice(price)}&nbsp;&nbsp;
