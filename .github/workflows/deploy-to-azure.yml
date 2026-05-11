@@ -1,9 +1,10 @@
-name: Deploy to Azure Storage
+name: Deploy to Azure App Service
 
 on:
   push:
     branches:
       - main
+      - 'release/*'
   workflow_dispatch:
 
 jobs:
@@ -11,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       artifact-name: ${{ steps.set-artifact.outputs.artifact-name }}
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,19 +28,26 @@ jobs:
         working-directory: './next-app'
         run: npm ci
 
-      - name: Build Next.js static site
+      - name: Build Next.js app
         working-directory: './next-app'
         run: npm run build
 
+      - name: Package deployment artifact
+        working-directory: './next-app'
+        run: |
+          rm -f ../deployment-package.zip
+          zip -r ../deployment-package.zip . -x "node_modules/*" ".git/*"
+
       - name: Set artifact name
         id: set-artifact
-        run: echo "artifact-name=static-site-${{ github.run_id }}" >> $GITHUB_OUTPUT
+        run: echo "artifact-name=app-service-${{ github.run_id }}" >> $GITHUB_OUTPUT
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.set-artifact.outputs.artifact-name }}
-          path: ./next-app/.next/
+          path: deployment-package.zip
+          if-no-files-found: error
           retention-days: 60
 
   approval:
@@ -47,15 +55,16 @@ jobs:
     needs: build
     environment:
       name: Production
-    
+
     steps:
       - name: Manual Approval Confirmed
-        run: echo "✅ Deployment approved and proceeding to Azure Storage"
+        run: echo "✅ Deployment approved and proceeding to Azure App Service"
 
   deploy:
-    runs-on: windows-latest
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')
+    runs-on: ubuntu-latest
     needs: [build, approval]
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -64,40 +73,20 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.build.outputs.artifact-name }}
-          path: ./next-app/.next
+          path: ./artifact
 
       - name: Azure CLI Login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Backup existing content and deploy
-        shell: pwsh
-        env:
-          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
-          AZURE_STORAGE_CONTAINER: ${{ secrets.AZURE_STORAGE_CONTAINER }}
-          AZURE_BACKUP_FOLDER: backup
+      - name: Deploy to Azure App Service
         run: |
-          # Source the backup and deploy script
-          $scriptPath = Join-Path $PWD "scripts" "backup-and-deploy.ps1"
-          & $scriptPath -StorageAccount $env:AZURE_STORAGE_ACCOUNT `
-                        -ContainerName $env:AZURE_STORAGE_CONTAINER `
-                        -BackupFolderName $env:AZURE_BACKUP_FOLDER `
-                        -SourcePath ".\next-app\.next"
-
-      - name: Verify deployment
-        shell: pwsh
-        env:
-          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
-          AZURE_STORAGE_CONTAINER: ${{ secrets.AZURE_STORAGE_CONTAINER }}
-        run: |
-          $storageContext = (Get-AzStorageAccount -ResourceGroupName ${{ secrets.AZURE_RESOURCE_GROUP }} `
-                             -Name $env:AZURE_STORAGE_ACCOUNT).Context
-          
-          $blobList = Get-AzStorageBlob -Container $env:AZURE_STORAGE_CONTAINER -Context $storageContext | `
-                      Where-Object { $_.Name -notlike "backup/*" } | Measure-Object
-          
-          Write-Output "✅ Successfully deployed $($blobList.Count) files to Azure Storage"
+          az webapp deploy \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --name ${{ secrets.AZURE_WEBAPP_NAME }} \
+            --src-path ./artifact/deployment-package.zip \
+            --type zip
 
       - name: Logout from Azure
         run: az logout
@@ -105,12 +94,11 @@ jobs:
       - name: Deployment Summary
         if: success()
         run: |
-          Write-Output "
-          ========================================
-          ✅ DEPLOYMENT SUCCESSFUL
-          ========================================
-          Storage Account: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
-          Container: ${{ secrets.AZURE_STORAGE_CONTAINER }}
-          Deployment ID: ${{ github.run_id }}
-          Timestamp: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
-          ========================================"
+          echo "========================================"
+          echo "✅ DEPLOYMENT SUCCESSFUL"
+          echo "========================================="
+          echo "Web App: ${{ secrets.AZURE_WEBAPP_NAME }}"
+          echo "Resource Group: ${{ secrets.AZURE_RESOURCE_GROUP }}"
+          echo "Deployment ID: ${{ github.run_id }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "========================================="
