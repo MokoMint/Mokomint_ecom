@@ -37,10 +37,44 @@ export default function ProductGallery({ images }: Props) {
   };
 
   return (
-    <div className="row">
-      {/* Thumbnails - Vertical on left */}
-      <div className="col-3">
-        <div className="d-flex flex-column gap-2">
+    <div className="d-flex flex-column gap-3">
+      {/* Main Image with Zoom */}
+      <div
+        className="position-relative border rounded"
+        style={{
+          aspectRatio: "1 / 1",
+          maxHeight: "450px",
+          overflow: "hidden",
+          cursor: "zoom-in",
+          backgroundColor: "#f5f5f5",
+        }}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Image
+          src={selected}
+          alt="Product"
+          fill
+          className="object-contain"
+          style={{
+            ...zoomStyle,
+            transition: showZoom ? "none" : "transform 0.2s ease",
+          }}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </div>
+
+      {/* Thumbnails - Below Main Image, Horizontal */}
+      <div style={{ width: "100%" }}>
+        <div
+          className="d-flex gap-2"
+          style={{
+            overflowX: "auto",
+            overflowY: "hidden",
+            paddingBottom: "8px",
+          }}
+        >
           {images.map((img, i) => (
             <div
               key={i}
@@ -48,42 +82,18 @@ export default function ProductGallery({ images }: Props) {
               className={`border rounded cursor-pointer p-1 ${
                 selected === img ? "border-primary" : "border-secondary"
               }`}
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                width: "clamp(50px, 12vw, 70px)",
+                height: "clamp(50px, 12vw, 70px)",
+                flexShrink: 0,
+              }}
             >
-              <div className="position-relative" style={{ height: 80 }}>
-                <Image
-                  src={img}
-                  alt={`Product ${i + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="80px"
-                />
+              <div className="position-relative" style={{ height: "100%" }}>
+                <Image src={img} alt={`Product ${i + 1}`} fill sizes="70px" />
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Main Image with Zoom */}
-      <div className="col-9">
-        <div
-          className="position-relative border rounded"
-          style={{ height: 450, overflow: "hidden", cursor: "zoom-in" }}
-          onMouseMove={handleMouseMove}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <Image
-            src={selected}
-            alt="Product"
-            fill
-            className="object-contain"
-            style={{
-              ...zoomStyle,
-              transition: showZoom ? "none" : "transform 0.2s ease",
-            }}
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
         </div>
       </div>
     </div>

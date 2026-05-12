@@ -70,14 +70,14 @@ export default async function ProductDetailPage({
       {/* Product Details */}
       <div className="row px-xl-5">
         {/* Left - Image Gallery */}
-        <div className="col-lg-6 mb-6">
+        <div className="col-lg-5 mb-5">
           <div className="bg-white shadow-sm p-3 rounded">
             <ProductGallery images={productImages} />
           </div>
         </div>
 
         {/* Right - Product Details */}
-        <div className="col-lg-6">
+        <div className="col-lg-7">
           <div className="bg-white shadow-sm p-4 mb-4 rounded">
             <h2 className="mb-3 font-weight-bold">{product.title}</h2>
 
