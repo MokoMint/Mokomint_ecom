@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import "../styles/product.css";
 
 interface Props {
   images: string[];
@@ -40,7 +41,7 @@ export default function ProductGallery({ images }: Props) {
     <div className="d-flex flex-column gap-3">
       {/* Main Image with Zoom */}
       <div
-        className="position-relative border rounded"
+        className="Gallery-image position-relative border rounded flex items-center justify-center"
         style={{
           aspectRatio: "1 / 1",
           maxHeight: "450px",
@@ -55,8 +56,10 @@ export default function ProductGallery({ images }: Props) {
         <Image
           src={selected}
           alt="Product"
-          fill
-          className="object-contain"
+          width={450}
+          height={450}
+          // className="object-contain"
+          className="object-contain w-auto h-auto max-w-full max-h-full p-4"
           style={{
             ...zoomStyle,
             transition: showZoom ? "none" : "transform 0.2s ease",
