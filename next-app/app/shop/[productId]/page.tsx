@@ -105,6 +105,13 @@ export default async function ProductDetailPage({
             {/* Description */}
             <p className="text-muted mb-4">{product.description}</p>
 
+            {/* Model Number */}
+            {product.modelNumber && (
+              <div className="mb-3">
+                <strong>Product Code:</strong> <u>{product.modelNumber}</u>
+              </div>
+            )}
+
             {/* What's in the Box */}
             {product.whatIsInTheBox && (
               <div className="mb-4">

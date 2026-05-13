@@ -40,7 +40,6 @@ export default function ProductDetailsTabs({
       <div className="bg-white p-4 border">
         {activeTab === "description" && (
           <div>
-            <h4>Product Description</h4>
             <p
               className="text-muted"
               dangerouslySetInnerHTML={{ __html: fullDescription }}
@@ -49,8 +48,9 @@ export default function ProductDetailsTabs({
         )}
         {activeTab === "information" && (
           <div>
-            <h4>Product Information</h4>
-            <p className="text-muted">{information}</p>
+            <p className="text-muted"
+              dangerouslySetInnerHTML={{ __html: information }}
+            ></p>
           </div>
         )}
         {/* {activeTab === "reviews" && (

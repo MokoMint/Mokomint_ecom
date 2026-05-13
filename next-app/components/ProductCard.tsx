@@ -84,11 +84,18 @@ export default function ProductCard({
       <div className="text-center py-4 px-3">
         <Link
           href={detailHref}
-          className="h6 text-decoration-none text-dark d-block mb-2 text-truncate"
+          className="h6 mb-3 text-muted"
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            minHeight: "2.5em",
+          }}
         >
           {title}
         </Link>
-        <p
+        {/* <p
           className="text-muted small mb-3"
           style={{
             display: "-webkit-box",
@@ -99,7 +106,7 @@ export default function ProductCard({
           }}
         >
           {description}
-        </p>
+        </p> */}
         <div className="d-flex align-items-center justify-content-center mb-3 gap-2">
           <h5 className="text-primary mb-0">
             {formatPrice(price)}&nbsp;&nbsp;
