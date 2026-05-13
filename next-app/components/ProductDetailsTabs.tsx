@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import React from "react";
 
 type TabKey = "description" | "information" | "reviews";
 
@@ -40,17 +41,18 @@ export default function ProductDetailsTabs({
       <div className="bg-white p-4 border">
         {activeTab === "description" && (
           <div>
-            <p
+            <div
               className="text-muted"
               dangerouslySetInnerHTML={{ __html: fullDescription }}
-            ></p>
+            ></div>
           </div>
         )}
         {activeTab === "information" && (
           <div>
-            <p className="text-muted"
+            <div
+              className="text-muted"
               dangerouslySetInnerHTML={{ __html: information }}
-            ></p>
+            ></div>
           </div>
         )}
         {/* {activeTab === "reviews" && (

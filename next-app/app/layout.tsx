@@ -42,18 +42,17 @@ export default function RootLayout({
         <ToastContainer position="top-right" autoClose={3000} theme="light" />
         <Script
           src="https://code.jquery.com/jquery-3.4.1.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script
           src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script
           src="/lib/owlcarousel/owl.carousel.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script src="/js/main.js" strategy="afterInteractive" />
-        <script src="https://cdn.jsdelivr.net/gh/Sean-93/newmarquee@v0.9.1/dist/newmarquee-min.js"></script>
       </body>
     </html>
   );
