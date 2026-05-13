@@ -23,6 +23,7 @@ const AddToCartButton = ({ product }: AddToCartButtonProps) => {
         stockStatus: product.stockStatus,
         amazonUrl: product.amazonUrl,
         detailsUrl: product.detailsUrl,
+        modelNumber: product.modelNumber,
         fullDescription: "",
         information: "",
         sizes: [],

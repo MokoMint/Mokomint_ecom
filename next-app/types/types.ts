@@ -21,7 +21,7 @@ export type ProductData = {
   category: string;
   ageRange: string;
   whatIsInTheBox: string;
-  modelNumber: string;
+  modelNumber?: string;
   isEnabled?: boolean;
 };
 
