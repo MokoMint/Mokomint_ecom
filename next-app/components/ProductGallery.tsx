@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import "../styles/product.css";
+import React from "react";
 
 interface Props {
   images: string[];
@@ -13,7 +14,15 @@ export default function ProductGallery({ images }: Props) {
   const [zoomStyle, setZoomStyle] = useState<React.CSSProperties>({});
   const [showZoom, setShowZoom] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
-
+  // React.useEffect(() => {
+  //   images.forEach((src) => {
+  //     if (typeof src === "string" && !src.includes("<script")) {
+  //       const img = new window.Image();
+  //       img.src = src;
+  //     }
+  //   });
+  // }, [images]);
+  // console.log(images);
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { left, top, width, height } =
       e.currentTarget.getBoundingClientRect();
