@@ -14,6 +14,15 @@ export default function ProductGallery({ images }: Props) {
   const [zoomStyle, setZoomStyle] = useState<React.CSSProperties>({});
   const [showZoom, setShowZoom] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   // React.useEffect(() => {
   //   images.forEach((src) => {
   //     if (typeof src === "string" && !src.includes("<script")) {
@@ -24,6 +33,7 @@ export default function ProductGallery({ images }: Props) {
   // }, [images]);
   // console.log(images);
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isMobile) return;
     const { left, top, width, height } =
       e.currentTarget.getBoundingClientRect();
 
