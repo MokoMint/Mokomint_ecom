@@ -115,7 +115,7 @@ export default async function ProductDetailPage({
             {/* What's in the Box */}
             {product.whatIsInTheBox && (
               <div className="mb-4">
-                <h5>What's in the Box</h5>
+                <h5>What's in the Box1</h5>
                 <div
                   dangerouslySetInnerHTML={{ __html: product.whatIsInTheBox }}
                 ></div>
