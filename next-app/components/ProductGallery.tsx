@@ -75,15 +75,16 @@ export default function ProductGallery({ images }: Props) {
         <Image
           src={selected}
           alt="Product"
-          width={450}
-          height={450}
+          width={400}
+          height={400}
+          priority
           // className="object-contain"
           className="object-contain w-auto h-auto max-w-full max-h-full p-4"
           style={{
             ...zoomStyle,
             transition: showZoom ? "none" : "transform 0.2s ease",
           }}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, 400px"
         />
       </div>
 
@@ -112,7 +113,13 @@ export default function ProductGallery({ images }: Props) {
               }}
             >
               <div className="position-relative" style={{ height: "100%" }}>
-                <Image src={img} alt={`Product ${i + 1}`} fill sizes="70px" />
+                <Image
+                  src={img}
+                  alt={`Product ${i + 1}`}
+                  fill
+                  sizes="70px"
+                  loading="lazy"
+                />
               </div>
             </div>
           ))}
