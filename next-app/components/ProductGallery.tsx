@@ -78,6 +78,7 @@ export default function ProductGallery({ images }: Props) {
           width={400}
           height={400}
           priority
+          unoptimized
           // className="object-contain"
           className="object-contain w-auto h-auto max-w-full max-h-full p-4"
           style={{
