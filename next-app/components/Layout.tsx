@@ -96,6 +96,7 @@ export default function SiteLayout({
                 height={100}
                 style={{ objectFit: "contain" }}
                 priority
+                unoptimized
               />
             </Link>
           </div>
@@ -205,6 +206,7 @@ export default function SiteLayout({
                   width={100}
                   height={100}
                   style={{ objectFit: "contain" }}
+                  unoptimized
                 />
               </Link>
               <button
