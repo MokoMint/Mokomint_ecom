@@ -28,8 +28,8 @@ export default async function ShopPage({
     );
   }
   if (age) {
-    categoryFilteredProducts = categoryFilteredProducts.filter(
-      (p) => p.ageRange === age,
+    categoryFilteredProducts = categoryFilteredProducts.filter((p) =>
+      p.ageRange.includes(age),
     );
   }
 

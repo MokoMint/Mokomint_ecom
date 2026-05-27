@@ -30,7 +30,7 @@ const AddToCartButton = ({ product }: AddToCartButtonProps) => {
         colors: [],
         reviewCount: 0,
         category: "",
-        ageRange: "",
+        ageRange: [],
         whatIsInTheBox: "",
       }),
     );

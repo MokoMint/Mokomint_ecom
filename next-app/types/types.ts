@@ -19,7 +19,7 @@ export type ProductData = {
   colors: string[];
   reviewCount: number;
   category: string;
-  ageRange: string;
+  ageRange: string[];
   whatIsInTheBox: string;
   modelNumber?: string;
   isEnabled?: boolean;

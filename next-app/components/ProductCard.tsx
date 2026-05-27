@@ -58,7 +58,7 @@ export default function ProductCard({
         colors: [],
         reviewCount: 0,
         category: "",
-        ageRange: "",
+        ageRange: [],
         modelNumber: "",
         whatIsInTheBox: "",
       }),
