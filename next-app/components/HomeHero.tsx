@@ -74,6 +74,7 @@ export default function HomeHero() {
                     width={100}
                     height={100}
                     quality={70}
+                    unoptimized
                   />
 
                   {/* Optional Caption */}

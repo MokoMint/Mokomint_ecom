@@ -50,7 +50,7 @@ export default function HomeFeatures() {
             <img className="img-fluid" src="img/moko_offer1.png" alt="" />
             <div className="offer-text">
               {/* <h6 className="text-white text-uppercase">Save 20%</h6> */}
-              <h3 className="text-white mb-3">Return Gift2</h3>
+              <h3 className="text-white mb-3">Return Gift</h3>
               {/* <a href="" className="btn btn-primary">Shop Now</a> */}
               <Link
                 href="/shop?category=return-gift"
