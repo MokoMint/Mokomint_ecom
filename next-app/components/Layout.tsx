@@ -83,7 +83,7 @@ export default function SiteLayout({
           </div>
         </div> */}
         <div
-          className="row align-items-center py-3 px-xl-5 d-none d-lg-flex"
+          className="row align-items-center pt-3 px-xl-5 d-none d-lg-flex"
           style={{ backgroundColor: "#ffffff" }}
           // f5f1ea
         >
@@ -93,7 +93,7 @@ export default function SiteLayout({
                 src="/img/Mokomint_logo.png"
                 alt="Mokomint Logo"
                 width={100}
-                height={60}
+                height={100}
                 style={{ objectFit: "contain" }}
                 priority
               />
@@ -203,7 +203,7 @@ export default function SiteLayout({
                   src="/img/Mokomint_logo.png"
                   alt="Mokomint Logo"
                   width={100}
-                  height={50}
+                  height={100}
                   style={{ objectFit: "contain" }}
                 />
               </Link>
