@@ -340,10 +340,10 @@ export default function SiteLayout({
                 <h6 className="text-secondary text-uppercase mt-4 mb-3">
                   Follow Us
                 </h6>
-                <div className="d-flex">
+                <div className="d-flex justify-content-center align-items-center">
                   <Link
                     href="https://x.com/Mokomintstore"
-                    className="fa fa-angle-right mr-2 btn btn-primary btn-square mr-2"
+                    className="btn btn-primary btn-square d-flex align-items-center justify-content-center mr-2"
                     target="_blank"
                   >
                     <i className="fab fa-twitter"></i>
@@ -351,21 +351,21 @@ export default function SiteLayout({
 
                   <Link
                     href="https://www.facebook.com/profile.php?id=61588319053726"
-                    className="fa fa-angle-right mr-2 btn btn-primary btn-square mr-2"
+                    className="btn btn-primary btn-square d-flex align-items-center justify-content-center mr-2"
                     target="_blank"
                   >
                     <i className="fab fa-facebook-f"></i>
                   </Link>
                   <Link
                     href="https://www.youtube.com/@MokoMint_official"
-                    className="fa fa-angle-right mr-2 btn btn-primary btn-square mr-2"
+                    className="btn btn-primary btn-square d-flex align-items-center justify-content-center mr-2"
                     target="_blank"
                   >
                     <i className="fab fa-youtube"></i>
                   </Link>
                   <Link
                     href="https://www.instagram.com/mokomint_official/"
-                    className="fa fa-angle-right mr-2 btn btn-primary btn-square"
+                    className="btn btn-primary btn-square d-flex align-items-center justify-content-center"
                     target="_blank"
                   >
                     <i className="fab fa-instagram"></i>

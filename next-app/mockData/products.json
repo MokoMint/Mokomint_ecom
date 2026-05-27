@@ -393,6 +393,7 @@
     },
   {
     "id": "11",
+    "isEnabled":  false,
     "title": "Rubber Ball",
     "description": "Bouncy rubber ball for children.",
     "fullDescription": "A durable rubber ball perfect for outdoor play and developing motor skills.",
@@ -417,6 +418,7 @@
   },
   {
     "id": "12",
+    "isEnabled":  false,
     "title": "Rubber Duck",
     "description": "Rubber duck toy for bath time.",
     "fullDescription": "A classic rubber duck that floats and squeaks for fun bath time play.",
@@ -441,6 +443,7 @@
   },
   {
     "id": "13",
+    "isEnabled":  false,
     "title": "Return Gift Box",
     "description": "Beautiful return gift box for special occasions.",
     "fullDescription": "An elegant gift box containing assorted toys and treats, perfect as a return gift.",
@@ -465,6 +468,7 @@
   },
   {
     "id": "14",
+    "isEnabled":  false,
     "title": "Return Gift Puzzle",
     "description": "Puzzle set as return gift.",
     "fullDescription": "A small puzzle set inside a gift box, ideal for return gifts at events.",
