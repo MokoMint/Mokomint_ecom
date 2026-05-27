@@ -59,20 +59,21 @@ export default function HomeHero() {
                   }`}
                   style={{
                     aspectRatio: "16 / 9", // ✅ responsive height
-                    overflow: "hidden",
-                    maxHeight: "430px",
+                    maxHeight: "auto",
                   }}
                 >
                   <Image
                     src={slide.src}
                     alt={slide.alt}
-                    fill
                     priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"}
                     sizes="100vw" // ✅ critical for mobile
                     style={{
                       objectFit: "cover",
                     }}
-                    quality={90}
+                    width={100}
+                    height={100}
+                    quality={70}
                   />
 
                   {/* Optional Caption */}
