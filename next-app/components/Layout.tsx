@@ -90,9 +90,9 @@ export default function SiteLayout({
           <div className="col-lg-4">
             <Link href="/" className="text-decoration-none">
               <Image
-                src="/img/Mokomint_logo.jpeg"
+                src="/img/Mokomint_logo.png"
                 alt="Mokomint Logo"
-                width={240}
+                width={100}
                 height={60}
                 style={{ objectFit: "contain" }}
                 priority
@@ -200,9 +200,9 @@ export default function SiteLayout({
             <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
               <Link href="/" className="text-decoration-none d-block d-lg-none">
                 <Image
-                  src="/img/Mokomint_logo.jpeg"
+                  src="/img/Mokomint_logo.png"
                   alt="Mokomint Logo"
-                  width={200}
+                  width={100}
                   height={50}
                   style={{ objectFit: "contain" }}
                 />
