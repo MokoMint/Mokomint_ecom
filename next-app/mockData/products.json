@@ -391,104 +391,284 @@
         "isBestSeller":  true,
         "whatIsInTheBox":  "\u003cul style=\u0027list-style-type: square;\u0027\u003e\u003cli\u003e1 Wooden Board\u003c/li\u003e\u003cli\u003e13 Wooden Hindi Swar Pieces\u003c/li\u003e\u003c/ul\u003e"
     },
-  {
-    "id": "11",
-    "isEnabled":  false,
-    "title": "Rubber Ball",
-    "description": "Bouncy rubber ball for children.",
-    "fullDescription": "A durable rubber ball perfect for outdoor play and developing motor skills.",
-    "information": "Material: Rubber, Age: 2+, Safe and non-toxic.",
-    "images": [
-      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
-      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
-      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
-    ],
-    "price": 15.00,
-    "oldPrice": 20.00,
-    "stockStatus": "In Stock",
-    "amazonUrl": "https://www.amazon.com/",
-    "detailsUrl": "/shop/11",
-    "sizes": ["XS", "S", "M", "L", "XL"],
-    "colors": ["Red", "Blue", "Green"],
-    "reviewCount": 75,
-    "category": "rubber",
-    "ageRange": "1-3",
-    "isBestSeller": true,
-    "whatIsInTheBox": ""
-  },
-  {
-    "id": "12",
-    "isEnabled":  false,
-    "title": "Rubber Duck",
-    "description": "Rubber duck toy for bath time.",
-    "fullDescription": "A classic rubber duck that floats and squeaks for fun bath time play.",
-    "information": "Material: Rubber, Age: 1+, Floats and squeaks.",
-    "images": [
-      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
-      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
-      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
-    ],
-    "price": 10.00,
-    "oldPrice": 15.00,
-    "stockStatus": "Low Stock",
-    "amazonUrl": "https://www.amazon.com/",
-    "detailsUrl": "/shop/12",
-    "sizes": ["S", "M"],
-    "colors": ["Yellow", "Blue"],
-    "reviewCount": 120,
-    "category": "rubber",
-    "ageRange": "1-3",
-    "isBestSeller": false,
-    "whatIsInTheBox": ""
-  },
-  {
-    "id": "13",
-    "isEnabled":  false,
-    "title": "Return Gift Box",
-    "description": "Beautiful return gift box for special occasions.",
-    "fullDescription": "An elegant gift box containing assorted toys and treats, perfect as a return gift.",
-    "information": "Material: Cardboard, Age: 3+, Includes puzzles and candies.",
-    "images": [
-      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
-      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
-      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
-    ],
-    "price": 25.00,
-    "oldPrice": 35.00,
-    "stockStatus": "In Stock",
-    "amazonUrl": "https://www.amazon.com/",
-    "detailsUrl": "/shop/13",
-    "sizes": ["M", "L"],
-    "colors": ["Red", "Blue", "Green"],
-    "reviewCount": 50,
-    "category": "return-gift",
-    "ageRange": "4-7",
-    "isBestSeller": false,
-    "whatIsInTheBox": ""
-  },
-  {
-    "id": "14",
-    "isEnabled":  false,
-    "title": "Return Gift Puzzle",
-    "description": "Puzzle set as return gift.",
-    "fullDescription": "A small puzzle set inside a gift box, ideal for return gifts at events.",
-    "information": "Material: Wood, Age: 4+, Includes 50 pieces.",
-    "images": [
-      { "url": "/img/return_gift/chocolate_diary/first_chocolate_diary.png", "sequence": 1 },
-      { "url": "/img/return_gift/chocolate_diary/second_chocolate_diary.png", "sequence": 2 },
-      { "url": "/img/return_gift/chocolate_diary/third_chocolate_diary.png", "sequence": 3 }
-    ],
-    "price": 20.00,
-    "oldPrice": 30.00,
-    "stockStatus": "Out of Stock",
-    "amazonUrl": "https://www.amazon.com/",
-    "detailsUrl": "/shop/14",
-    "sizes": ["M"],
-    "colors": ["Multicolor"],
-    "reviewCount": 30,
-    "category": "return-gift",
-    "ageRange": "8-10",
-    "isBestSeller": false,
-    "whatIsInTheBox": ""
-  }
+    {
+        "id":  "8",
+        "isEnabled":  true,
+        "modelNumber":  "MM-WP-203AN",
+        "title":  "2-in-1 Wooden Alphabet and Numbers 1-20 Puzzle Combo | ABC \u0026 123 Learning Set with Easy-Grip Knobs | 9mm Extra Thick Boards | Montessori STEM \u0026 Literacy Toys for Preschoolers",
+        "fullDescription":  "\u003ch4\u003e\u003cspan style=\u0027color: #40a8df;\u0027\u003eDesigned for Cultural Discovery and Durability\u003c/span\u003e\u003c/h4\u003e\u003cp\u003eIntroduce your child to the beauty of their first language with the MokoMint Premium Wooden Hindi Swar Puzzle. Designed to make \u0027Varnamala\u0027 engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile, hands-on format. It is the perfect cultural foundation for early literacy, helping children recognize the shapes of Hindi characters while building a strong connection to their linguistic heritage.\u003c/p\u003e\u003cp\u003eCrafted from 9mm extra-thick solid wood, this 350g board provides a stable, professional-grade surface that stands up to years of daily learning. It is built to be a long-lasting educational heirloom in any Indian home or preschool.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eLanguage Development\u003c/strong\u003e: Each piece helps children master Hindi vowel recognition and pronunciation, providing a head start for school readiness.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eTactile Mastery\u003c/strong\u003e: The sturdy yellow knobs are specifically engineered for small hands, encouraging the pincer grasp and improving hand-eye coordination.\u003c/p\u003e",
+        "information":  "\u003cp\u003e\u003cstrong\u003eMaterial\u003c/strong\u003e: Wood\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eAge Recommended\u003c/strong\u003e: 2+ years\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEarly Hindi Literacy \u0026 Phonetics\u003c/strong\u003e: Featuring vibrant and clear Hindi Swar (vowel) characters, this board is a perfect tool for building a foundation in regional language skills. It helps children identify \u0027Aksharmala\u0027 shapes and correlates them with their unique sounds\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eConfident Cultural Exploration\u003c/strong\u003e: The weighted wooden base stays firmly in place, providing a frustration-free matching experience. Precision-cut slots allow children to easily identify where each vowel belongs, boosting spatial awareness and cultural pride\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eIndustrial-Grade 9mm Durability\u003c/strong\u003e: This 350g solid wood board is engineered to be break-resistant and warp-proof. Its heavy-duty profile ensures it remains a staple in your playroom or classroom for years, standing up to the most enthusiastic high-energy play\u003c/p\u003e \u003cp\u003e\u003cstrong\u003ePrecision Grip Development\u003c/strong\u003e: Every character piece is equipped with a sturdy yellow knob designed to facilitate the \u0027pincer grasp.\u0027 This essential movement builds the finger strength and dexterity required for future handwriting in both Hindi and English\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEco-Conscious \u0026 Toddler-Safe\u003c/strong\u003e: We prioritize your child’s safety by using sustainable wood and certified non-toxic, lead-free paints. Every edge is meticulously precision-sanded to ensure a smooth, splinter-free tactile experience\u003c/p\u003e",
+        "images":  [
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number/MAIN.png",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number/PT01.jpg",
+                           "sequence":  2
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number/PT03.jpg",
+                           "sequence":  3
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number/PT02.jpg",
+                           "sequence":  4
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number/PT04.jpg",
+                           "sequence":  5
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number/PT05.jpg",
+                           "sequence":  6
+                       }
+                   ],
+        "price":  289,
+        "oldPrice":  549,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0H15BM7XY",
+        "detailsUrl":  "/shop/8",
+        "sizes":  [
+                      "XS",
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue"
+                   ],
+        "category":  [
+                         "wooden-puzzle"
+                     ],
+        "ageRange":  "1-3",
+        "isBestSeller":  true,
+        "whatIsInTheBox":  "\u003cul style=\u0027list-style-type: square;\u0027\u003e\u003cli\u003e2 Wooden Boards of Alphabets and Number\u003c/li\u003e\u003c/ul\u003e"
+    },
+    {
+        "id":  "9",
+        "isEnabled":  true,
+        "modelNumber":  "MM-WP-201AHS",
+        "title":  "2-in-1 Wooden Hindi Swar and English Alphabet Puzzle Combo | Varnamala \u0026 ABC Learning Set with Easy-Grip Knobs | 9mm Extra Thick Boards | Bilingual Literacy Toys for Kids",
+        "fullDescription":  "\u003ch4\u003e\u003cspan style=\u0027color: #40a8df;\u0027\u003eDesigned for Cultural Discovery and Durability\u003c/span\u003e\u003c/h4\u003e\u003cp\u003eIntroduce your child to the beauty of their first language with the MokoMint Premium Wooden Hindi Swar Puzzle. Designed to make \u0027Varnamala\u0027 engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile, hands-on format. It is the perfect cultural foundation for early literacy, helping children recognize the shapes of Hindi characters while building a strong connection to their linguistic heritage.\u003c/p\u003e\u003cp\u003eCrafted from 9mm extra-thick solid wood, this 350g board provides a stable, professional-grade surface that stands up to years of daily learning. It is built to be a long-lasting educational heirloom in any Indian home or preschool.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eLanguage Development\u003c/strong\u003e: Each piece helps children master Hindi vowel recognition and pronunciation, providing a head start for school readiness.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eTactile Mastery\u003c/strong\u003e: The sturdy yellow knobs are specifically engineered for small hands, encouraging the pincer grasp and improving hand-eye coordination.\u003c/p\u003e",
+        "information":  "\u003cp\u003e\u003cstrong\u003eMaterial\u003c/strong\u003e: Wood\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eAge Recommended\u003c/strong\u003e: 2+ years\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEarly Hindi Literacy \u0026 Phonetics\u003c/strong\u003e: Featuring vibrant and clear Hindi Swar (vowel) characters, this board is a perfect tool for building a foundation in regional language skills. It helps children identify \u0027Aksharmala\u0027 shapes and correlates them with their unique sounds\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eConfident Cultural Exploration\u003c/strong\u003e: The weighted wooden base stays firmly in place, providing a frustration-free matching experience. Precision-cut slots allow children to easily identify where each vowel belongs, boosting spatial awareness and cultural pride\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eIndustrial-Grade 9mm Durability\u003c/strong\u003e: This 350g solid wood board is engineered to be break-resistant and warp-proof. Its heavy-duty profile ensures it remains a staple in your playroom or classroom for years, standing up to the most enthusiastic high-energy play\u003c/p\u003e \u003cp\u003e\u003cstrong\u003ePrecision Grip Development\u003c/strong\u003e: Every character piece is equipped with a sturdy yellow knob designed to facilitate the \u0027pincer grasp.\u0027 This essential movement builds the finger strength and dexterity required for future handwriting in both Hindi and English\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEco-Conscious \u0026 Toddler-Safe\u003c/strong\u003e: We prioritize your child’s safety by using sustainable wood and certified non-toxic, lead-free paints. Every edge is meticulously precision-sanded to ensure a smooth, splinter-free tactile experience\u003c/p\u003e",
+        "images":  [
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar/MAIN.jpg",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar/PT02.jpg",
+                           "sequence":  2
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar/PT03.jpg",
+                           "sequence":  3
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar/PT01.jpg",
+                           "sequence":  4
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar/PT04.jpg",
+                           "sequence":  5
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar/PT05.jpg",
+                           "sequence":  6
+                       }
+                   ],
+        "price":  299,
+        "oldPrice":  549,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0H157PPHS",
+        "detailsUrl":  "/shop/9",
+        "sizes":  [
+                      "XS",
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue"
+                   ],
+        "category":  [
+                         "wooden-puzzle"
+                     ],
+        "ageRange":  "1-3",
+        "isBestSeller":  true,
+        "whatIsInTheBox":  "\u003cul style=\u0027list-style-type: square;\u0027\u003e\u003cli\u003e2 Wooden Boards of Alphabets and Hindi Swarr\u003c/li\u003e\u003c/ul\u003e"
+    },
+    {
+        "id":  "10",
+        "isEnabled":  true,
+        "modelNumber":  "MM-WP-202FV",
+        "title":  "Wooden Fruit and Vegetable Puzzle Set for Toddlers | 2-in-1 Combo Pack with Easy-Grip Knobs | 9mm Extra Thick Durable Boards | Montessori Learning Toys for Healthy Habits",
+        "fullDescription":  "\u003ch4\u003e\u003cspan style=\u0027color: #40a8df;\u0027\u003eDesigned for Cultural Discovery and Durability\u003c/span\u003e\u003c/h4\u003e\u003cp\u003eIntroduce your child to the beauty of their first language with the MokoMint Premium Wooden Hindi Swar Puzzle. Designed to make \u0027Varnamala\u0027 engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile, hands-on format. It is the perfect cultural foundation for early literacy, helping children recognize the shapes of Hindi characters while building a strong connection to their linguistic heritage.\u003c/p\u003e\u003cp\u003eCrafted from 9mm extra-thick solid wood, this 350g board provides a stable, professional-grade surface that stands up to years of daily learning. It is built to be a long-lasting educational heirloom in any Indian home or preschool.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eLanguage Development\u003c/strong\u003e: Each piece helps children master Hindi vowel recognition and pronunciation, providing a head start for school readiness.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eTactile Mastery\u003c/strong\u003e: The sturdy yellow knobs are specifically engineered for small hands, encouraging the pincer grasp and improving hand-eye coordination.\u003c/p\u003e",
+        "information":  "\u003cp\u003e\u003cstrong\u003eMaterial\u003c/strong\u003e: Wood\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eAge Recommended\u003c/strong\u003e: 2+ years\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEarly Hindi Literacy \u0026 Phonetics\u003c/strong\u003e: Featuring vibrant and clear Hindi Swar (vowel) characters, this board is a perfect tool for building a foundation in regional language skills. It helps children identify \u0027Aksharmala\u0027 shapes and correlates them with their unique sounds\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eConfident Cultural Exploration\u003c/strong\u003e: The weighted wooden base stays firmly in place, providing a frustration-free matching experience. Precision-cut slots allow children to easily identify where each vowel belongs, boosting spatial awareness and cultural pride\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eIndustrial-Grade 9mm Durability\u003c/strong\u003e: This 350g solid wood board is engineered to be break-resistant and warp-proof. Its heavy-duty profile ensures it remains a staple in your playroom or classroom for years, standing up to the most enthusiastic high-energy play\u003c/p\u003e \u003cp\u003e\u003cstrong\u003ePrecision Grip Development\u003c/strong\u003e: Every character piece is equipped with a sturdy yellow knob designed to facilitate the \u0027pincer grasp.\u0027 This essential movement builds the finger strength and dexterity required for future handwriting in both Hindi and English\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEco-Conscious \u0026 Toddler-Safe\u003c/strong\u003e: We prioritize your child’s safety by using sustainable wood and certified non-toxic, lead-free paints. Every edge is meticulously precision-sanded to ensure a smooth, splinter-free tactile experience\u003c/p\u003e",
+        "images":  [
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Fruit_Veg/MAIN.jpg",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Fruit_Veg/PT03.jpg",
+                           "sequence":  2
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Fruit_Veg/PT02.jpg",
+                           "sequence":  3
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Fruit_Veg/PT01.jpg",
+                           "sequence":  4
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Fruit_Veg/PT04.jpg",
+                           "sequence":  5
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Fruit_Veg/PT05.jpg",
+                           "sequence":  6
+                       }
+                   ],
+        "price":  289,
+        "oldPrice":  549,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0H156CBC3",
+        "detailsUrl":  "/shop/10",
+        "sizes":  [
+                      "XS",
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue"
+                   ],
+        "category":  [
+                         "wooden-puzzle"
+                     ],
+        "ageRange":  "1-3",
+        "isBestSeller":  true,
+        "whatIsInTheBox":  "\u003cul style=\u0027list-style-type: square;\u0027\u003e\u003cli\u003e2 Wooden Boards of Fruit and Vegetable\u003c/li\u003e\u003c/ul\u003e"
+    },
+    {
+        "id":  "11",
+        "isEnabled":  true,
+        "modelNumber":  "MM-WP-302ANS",
+        "title":  "3-in-1 Wooden Alphabet, Numbers \u0026 Shapes Puzzle Set | Early Learning Combo with Easy-Grip Knobs | 9mm Extra Thick Durable Boards | Montessori STEM Toy for Toddlers",
+        "fullDescription":  "\u003ch4\u003e\u003cspan style=\u0027color: #40a8df;\u0027\u003eDesigned for Cultural Discovery and Durability\u003c/span\u003e\u003c/h4\u003e\u003cp\u003eIntroduce your child to the beauty of their first language with the MokoMint Premium Wooden Hindi Swar Puzzle. Designed to make \u0027Varnamala\u0027 engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile, hands-on format. It is the perfect cultural foundation for early literacy, helping children recognize the shapes of Hindi characters while building a strong connection to their linguistic heritage.\u003c/p\u003e\u003cp\u003eCrafted from 9mm extra-thick solid wood, this 350g board provides a stable, professional-grade surface that stands up to years of daily learning. It is built to be a long-lasting educational heirloom in any Indian home or preschool.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eLanguage Development\u003c/strong\u003e: Each piece helps children master Hindi vowel recognition and pronunciation, providing a head start for school readiness.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eTactile Mastery\u003c/strong\u003e: The sturdy yellow knobs are specifically engineered for small hands, encouraging the pincer grasp and improving hand-eye coordination.\u003c/p\u003e",
+        "information":  "\u003cp\u003e\u003cstrong\u003eMaterial\u003c/strong\u003e: Wood\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eAge Recommended\u003c/strong\u003e: 2+ years\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEarly Hindi Literacy \u0026 Phonetics\u003c/strong\u003e: Featuring vibrant and clear Hindi Swar (vowel) characters, this board is a perfect tool for building a foundation in regional language skills. It helps children identify \u0027Aksharmala\u0027 shapes and correlates them with their unique sounds\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eConfident Cultural Exploration\u003c/strong\u003e: The weighted wooden base stays firmly in place, providing a frustration-free matching experience. Precision-cut slots allow children to easily identify where each vowel belongs, boosting spatial awareness and cultural pride\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eIndustrial-Grade 9mm Durability\u003c/strong\u003e: This 350g solid wood board is engineered to be break-resistant and warp-proof. Its heavy-duty profile ensures it remains a staple in your playroom or classroom for years, standing up to the most enthusiastic high-energy play\u003c/p\u003e \u003cp\u003e\u003cstrong\u003ePrecision Grip Development\u003c/strong\u003e: Every character piece is equipped with a sturdy yellow knob designed to facilitate the \u0027pincer grasp.\u0027 This essential movement builds the finger strength and dexterity required for future handwriting in both Hindi and English\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEco-Conscious \u0026 Toddler-Safe\u003c/strong\u003e: We prioritize your child’s safety by using sustainable wood and certified non-toxic, lead-free paints. Every edge is meticulously precision-sanded to ensure a smooth, splinter-free tactile experience\u003c/p\u003e",
+        "images":  [
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number_Shapes/MAIN.jpg",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number_Shapes/PT01.jpg",
+                           "sequence":  2
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number_Shapes/PT05.jpg",
+                           "sequence":  3
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number_Shapes/PT02.jpg",
+                           "sequence":  4
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number_Shapes/PT03.jpg",
+                           "sequence":  5
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Number_Shapes/PT04.jpg",
+                           "sequence":  6
+                       }
+                   ],
+        "price":  429,
+        "oldPrice":  689,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0H153PLZ1",
+        "detailsUrl":  "/shop/11",
+        "sizes":  [
+                      "XS",
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue"
+                   ],
+        "category":  [
+                         "wooden-puzzle"
+                     ],
+        "ageRange":  "1-3",
+        "isBestSeller":  true,
+        "whatIsInTheBox":  "\u003cul style=\u0027list-style-type: square;\u0027\u003e\u003cli\u003e3 Wooden Boards of Alphabets, Numbers and Shapes\u003c/li\u003e\u003c/ul\u003e"
+    },
+    {
+        "id":  "12",
+        "isEnabled":  true,
+        "modelNumber":  "MM-WP-301ANHS",
+        "title":  "3-in-1 Wooden Hindi Swar, Alphabet \u0026 Numbers Puzzle Set | Varnamala, ABC \u0026 123 Combo with Easy-Grip Knobs | 9mm Extra Thick Boards | Montessori Language \u0026 Math Toys",
+        "fullDescription":  "\u003ch4\u003e\u003cspan style=\u0027color: #40a8df;\u0027\u003eDesigned for Cultural Discovery and Durability\u003c/span\u003e\u003c/h4\u003e\u003cp\u003eIntroduce your child to the beauty of their first language with the MokoMint Premium Wooden Hindi Swar Puzzle. Designed to make \u0027Varnamala\u0027 engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile, hands-on format. It is the perfect cultural foundation for early literacy, helping children recognize the shapes of Hindi characters while building a strong connection to their linguistic heritage.\u003c/p\u003e\u003cp\u003eCrafted from 9mm extra-thick solid wood, this 350g board provides a stable, professional-grade surface that stands up to years of daily learning. It is built to be a long-lasting educational heirloom in any Indian home or preschool.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eLanguage Development\u003c/strong\u003e: Each piece helps children master Hindi vowel recognition and pronunciation, providing a head start for school readiness.\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eTactile Mastery\u003c/strong\u003e: The sturdy yellow knobs are specifically engineered for small hands, encouraging the pincer grasp and improving hand-eye coordination.\u003c/p\u003e",
+        "information":  "\u003cp\u003e\u003cstrong\u003eMaterial\u003c/strong\u003e: Wood\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eAge Recommended\u003c/strong\u003e: 2+ years\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEarly Hindi Literacy \u0026 Phonetics\u003c/strong\u003e: Featuring vibrant and clear Hindi Swar (vowel) characters, this board is a perfect tool for building a foundation in regional language skills. It helps children identify \u0027Aksharmala\u0027 shapes and correlates them with their unique sounds\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eConfident Cultural Exploration\u003c/strong\u003e: The weighted wooden base stays firmly in place, providing a frustration-free matching experience. Precision-cut slots allow children to easily identify where each vowel belongs, boosting spatial awareness and cultural pride\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eIndustrial-Grade 9mm Durability\u003c/strong\u003e: This 350g solid wood board is engineered to be break-resistant and warp-proof. Its heavy-duty profile ensures it remains a staple in your playroom or classroom for years, standing up to the most enthusiastic high-energy play\u003c/p\u003e \u003cp\u003e\u003cstrong\u003ePrecision Grip Development\u003c/strong\u003e: Every character piece is equipped with a sturdy yellow knob designed to facilitate the \u0027pincer grasp.\u0027 This essential movement builds the finger strength and dexterity required for future handwriting in both Hindi and English\u003c/p\u003e \u003cp\u003e\u003cstrong\u003eEco-Conscious \u0026 Toddler-Safe\u003c/strong\u003e: We prioritize your child’s safety by using sustainable wood and certified non-toxic, lead-free paints. Every edge is meticulously precision-sanded to ensure a smooth, splinter-free tactile experience\u003c/p\u003e",
+        "images":  [
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar_Number/MAIN.jpg",
+                           "sequence":  1
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar_Number/PT01.jpg",
+                           "sequence":  2
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar_Number/PT05.jpg",
+                           "sequence":  3
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar_Number/PT02.jpg",
+                           "sequence":  4
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar_Number/PT03.jpg",
+                           "sequence":  5
+                       },
+                       {
+                           "url":  "/img/wooden/puzzle/Combo_Alphabet_Hindi_swar_Number/PT04.jpg",
+                           "sequence":  6
+                       }
+                   ],
+        "price":  469,
+        "oldPrice":  689,
+        "stockStatus":  "In Stock",
+        "amazonUrl":  "https://www.amazon.in/dp/B0H159RMKM",
+        "detailsUrl":  "/shop/12",
+        "sizes":  [
+                      "XS",
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                  ],
+        "colors":  [
+                       "Red",
+                       "Blue"
+                   ],
+        "category":  [
+                         "wooden-puzzle"
+                     ],
+        "ageRange":  "1-3",
+        "isBestSeller":  true,
+        "whatIsInTheBox":  "\u003cul style=\u0027list-style-type: square;\u0027\u003e\u003cli\u003e3 Wooden Boards of Alphabets, Numbers and Hindi Swar\u003c/li\u003e\u003c/ul\u003e"
+    }
 ]
