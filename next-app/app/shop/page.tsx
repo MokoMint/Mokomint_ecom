@@ -21,20 +21,23 @@ export default async function ShopPage({
   const priceFilter = params.price as string;
 
   // Products filtered by category/age only (for filter counts)
-  let categoryFilteredProducts = products;
+  let filteredByCategory = products;
   if (category) {
-    categoryFilteredProducts = categoryFilteredProducts.filter(
-      (p) => p.category === category,
+    filteredByCategory = filteredByCategory.filter((p) =>
+      p.category.includes(category),
     );
   }
+
+  let filteredByCategoryAndAge = filteredByCategory;
+  console.log("filteredByCategoryAndAge", filteredByCategoryAndAge);
   if (age) {
-    categoryFilteredProducts = categoryFilteredProducts.filter((p) =>
+    filteredByCategoryAndAge = filteredByCategoryAndAge.filter((p) =>
       p.ageRange.includes(age),
     );
   }
 
   // Products filtered by category/age AND price (for display)
-  let filteredProducts = categoryFilteredProducts;
+  let filteredProducts = filteredByCategoryAndAge;
   if (priceFilter && priceFilter !== "price-all") {
     const selectedFilter = dropdowns.priceFilters.find(
       (f) => f.id === priceFilter,
@@ -60,7 +63,7 @@ export default async function ShopPage({
       <ShopBreadcrumb current={breadcrumbTitle} />
       <div className="row px-xl-5">
         <ShopFilters
-          products={categoryFilteredProducts}
+          products={filteredByCategoryAndAge}
           currentPriceFilter={priceFilter}
         />
         <div className="col-lg-9 col-md-8">

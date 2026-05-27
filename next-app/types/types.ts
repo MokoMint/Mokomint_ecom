@@ -18,7 +18,7 @@ export type ProductData = {
   sizes: string[];
   colors: string[];
   reviewCount: number;
-  category: string;
+  category: string[];
   ageRange: string[];
   whatIsInTheBox: string;
   modelNumber?: string;
