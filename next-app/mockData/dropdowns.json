@@ -61,8 +61,8 @@
   ],
   "priceFilters": [
     { "id": "price-all", "label": "All Price", "min": null, "max": null },
-    { "id": "price-1", "label": "Below ₹50", "min": 0, "max": 50 },
-    { "id": "price-2", "label": "₹50 - ₹100", "min": 50, "max": 100 },
-    { "id": "price-3", "label": "Above ₹100", "min": 100, "max": null }
+    { "id": "price-1", "label": "Below ₹100", "min": 0, "max": 100 },
+    { "id": "price-2", "label": "₹100 - ₹200", "min": 100, "max": 200 },
+    { "id": "price-3", "label": "Above ₹200", "min": 200, "max": null }
   ]
 }
