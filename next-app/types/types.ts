@@ -5,8 +5,9 @@ export type ProductImage = {
 
 export type ProductData = {
   id: string;
+  isEnabled?: boolean;
+  modelNumber?: string;
   title: string;
-  description: string;
   fullDescription: string;
   information: string;
   images: ProductImage[];
@@ -17,12 +18,12 @@ export type ProductData = {
   detailsUrl: string;
   sizes: string[];
   colors: string[];
-  reviewCount: number;
-  category: string[];
   ageRange: string[];
+  category: string[];
   whatIsInTheBox: string;
-  modelNumber?: string;
-  isEnabled?: boolean;
+  isBestSeller?: boolean;
+  reviewCount: number;
+  description: string;
 };
 
 export type DropdownItem = {
