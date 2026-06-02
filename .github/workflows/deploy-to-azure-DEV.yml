@@ -35,7 +35,7 @@ jobs:
         working-directory: './next-app'
         run: |
           rm -f ../deployment-package.zip
-          zip -r ../deployment-package.zip . -x "node_modules/*" ".git/*"
+          zip -r ../deployment-package.zip . -x ".git/*"
 
       - name: Set artifact name
         id: set-artifact
