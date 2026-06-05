@@ -21,7 +21,9 @@ export default function HomeFeatures() {
               style={{ padding: "30px" }}
             >
               <h1 className="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-              <h5 className="font-weight-semi-bold m-0">Free Shipping</h5>
+              <h5 className="font-weight-semi-bold m-0">
+                Free Shipping Above 1000
+              </h5>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
