@@ -66,6 +66,8 @@ export default function ProductCard({
     toast.success("Product added to cart!");
   };
 
+  const hasAmazonLink = Boolean(amazonUrl && amazonUrl.trim());
+
   return (
     <div className="product-item bg-light mb-4 shadow-sm">
       <Link href={detailHref} className="text-decoration-none">
@@ -130,16 +132,18 @@ export default function ProductCard({
           >
             {buyDisabled ? "Out of Stock" : "Add to Cart"}
           </button>
-          <a
-            href={amazonUrl}
-            target="_blank"
-            rel="noreferrer"
-            className={`btn btn-warning w-100 text-white fw-bold ${buyDisabled ? "disabled" : ""}`}
-            style={{ boxShadow: "0 10px 25px rgba(255, 193, 7, 0.25)" }}
-            aria-disabled={buyDisabled}
+          <button
+            type="button"
+            onClick={() =>
+              hasAmazonLink &&
+              window.open(amazonUrl, "_blank", "noopener,noreferrer")
+            }
+            disabled={!hasAmazonLink}
+            className={`btn btn-warning w-100 text-black fw-bold ${!hasAmazonLink ? "disabled" : ""}`}
+            style={{ boxShadow: "rgba(255, 193, 7, 0.25) 0px 10px 25px" }}
           >
-            {buyDisabled ? "Unavailable on Amazon" : "Buy on Amazon"}
-          </a>
+            {hasAmazonLink ? "Buy on Amazon" : "Not available on Amazon"}
+          </button>
           {/* <Link
             href={detailHref}
             className="btn btn-outline-primary w-100 fw-semibold"

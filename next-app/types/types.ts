@@ -14,7 +14,7 @@ export type ProductData = {
   price: number;
   oldPrice?: number;
   stockStatus: "In Stock" | "Low Stock" | "Out of Stock";
-  amazonUrl: string;
+  amazonUrl?: string; // if this is blank then it will be treated as not available on amazon
   detailsUrl: string;
   sizes: string[];
   colors: string[];

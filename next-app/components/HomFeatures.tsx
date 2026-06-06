@@ -112,20 +112,20 @@ export default function HomeFeatures() {
               color: "#fff4a4",
               border: "#1f5a8d",
             },
-            {
-              range: "11-14",
-              unit: "YEARS",
-              bg: "#fd8f05",
-              color: "#ffffff",
-              border: "#f17d00",
-            },
-            {
-              range: "14+",
-              unit: "YEARS",
-              bg: "#f5a2d5",
-              color: "#271733",
-              border: "#ed7fc5",
-            },
+            // {
+            //   range: "11-14",
+            //   unit: "YEARS",
+            //   bg: "#fd8f05",
+            //   color: "#ffffff",
+            //   border: "#f17d00",
+            // },
+            // {
+            //   range: "14+",
+            //   unit: "YEARS",
+            //   bg: "#f5a2d5",
+            //   color: "#271733",
+            //   border: "#ed7fc5",
+            // },
           ].map((item) => (
             <div
               key={item.range}

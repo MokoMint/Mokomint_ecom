@@ -143,23 +143,26 @@ export default async function ProductDetailPage({
             </div>
 
             {/* Action Buttons */}
-            <div className="d-flex gap-2 mb-3">
-              {/* <button
-                onClick={handleAddToCart}
-                type="button"
-                className="btn btn-warning btn-lg text-white flex-fill"
-              >
-                Add To Cart
-              </button> */}
+            <div className="d-flex gap-2 mb-3 flex-column flex-sm-row">
               <AddToCartButton product={product} />
-              <a
-                href={product.amazonUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-primary btn-lg flex-fill"
-              >
-                Buy on Amazon
-              </a>
+              {product.amazonUrl ? (
+                <a
+                  href={product.amazonUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-outline-primary btn-lg flex-fill"
+                >
+                  Buy on Amazon
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  className="btn btn-secondary btn-lg flex-fill"
+                >
+                  Not available on Amazon
+                </button>
+              )}
             </div>
           </div>
         </div>
