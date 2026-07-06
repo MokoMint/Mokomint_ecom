@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>MokoMint Official Catalog</title>
@@ -10,7 +11,7 @@
             size: A4 portrait;
             margin: 0;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -21,7 +22,9 @@
             print-color-adjust: exact;
         }
 
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
 
@@ -88,7 +91,7 @@
             border-radius: 50%;
             display: inline-block;
             margin-bottom: 8mm;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
             position: relative;
             overflow: hidden;
         }
@@ -128,7 +131,7 @@
             padding: 3.5mm 9mm;
             border-radius: 50px;
             margin-bottom: 25mm;
-            box-shadow: 0 6px 16px rgba(244,130,33,0.35);
+            box-shadow: 0 6px 16px rgba(244, 130, 33, 0.35);
         }
 
         .title-block h2 {
@@ -233,7 +236,7 @@
             border: 2.5px solid #e2f3fc;
             border-radius: 20px;
             padding: 5mm;
-            box-shadow: 0 4px 14px rgba(47,165,220,0.04);
+            box-shadow: 0 4px 14px rgba(47, 165, 220, 0.04);
         }
 
         .product-photo-holder {
@@ -273,8 +276,16 @@
             font-weight: bold;
             margin-right: 1.5mm;
         }
-        .lbl-green { background-color: #f3f9eb; color: #96d55a; }
-        .lbl-blue { background-color: #e2f3fc; color: #2fa5dc; }
+
+        .lbl-green {
+            background-color: #f3f9eb;
+            color: #96d55a;
+        }
+
+        .lbl-blue {
+            background-color: #e2f3fc;
+            color: #2fa5dc;
+        }
 
         .card-p-desc {
             font-size: 10pt;
@@ -318,7 +329,7 @@
             background: rgba(255, 255, 255, 0.96);
             border: 2.5px solid #e2f3fc;
             border-radius: 20px;
-            box-shadow: 0 4px 14px rgba(47,165,220,0.04);
+            box-shadow: 0 4px 14px rgba(47, 165, 220, 0.04);
         }
 
         .vertical-image-cell {
@@ -371,7 +382,7 @@
             border-radius: 20px;
             padding: 5mm;
             margin-bottom: 8mm;
-            box-shadow: 0 4px 14px rgba(47,165,220,0.04);
+            box-shadow: 0 4px 14px rgba(47, 165, 220, 0.04);
         }
 
         .square-images-row {
@@ -477,31 +488,36 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- PAGE 1: COVER -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
-            <line x1="34" y1="18" x2="39" y2="44" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
-            <line x1="52" y1="10" x2="60" y2="28" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+            <line x1="34" y1="18" x2="39" y2="44" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+            <line x1="52" y1="10" x2="60" y2="28" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.92"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.88"/>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.92" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.88" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.90"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.82"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.90" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.82" />
         </svg>
         <div class="foreground-content">
             <div class="cover-layout">
                 <div class="logo-frame-circle">
-                    <img src="Logo.jpeg" alt="MokoMint Official Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"/>
-                    <span style="display:none; line-height:48mm; font-family:'Fredoka',sans-serif; color:#2fa5dc; font-weight:bold; font-size:16pt;">MokoMint</span>
+                    <img src="Logo.jpeg" alt="MokoMint Official Logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <span
+                        style="display:none; line-height:48mm; font-family:'Fredoka',sans-serif; color:#2fa5dc; font-weight:bold; font-size:16pt;">MokoMint</span>
                 </div>
                 <h4 class="brand-headline-blue">www.MokoMint.com</h4>
-                <h4 class="brand-headline-green">92512-64027 & 97119-72036</h4>
+                <h4 class="brand-headline-green">92512-64027 </h4>
                 <div class="brand-pill-tag">Online toy store for smart little minds</div>
                 <div class="title-block">
                     <h2>PRODUCT CATALOGUE</h2>
@@ -514,29 +530,38 @@
     <!-- PAGE 2: ABOUT THE COMPANY -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
         <!-- Re-added missing decorative background shapes to middle pages -->
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12"/>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
         </svg>
         <div class="foreground-content">
             <div class="header-ribbon-bar">
                 <h2>About <span>Our Company</span></h2>
             </div>
-            
+
             <div class="about-box">
                 <h3>Welcome to MokoMint</h3>
-                <p>At MokoMint, we design premium educational wooden puzzles and toys that help young minds grow. We started with a simple goal: to replace plastic screens and low-quality toys with meaningful, hands-on learning tools that children genuinely enjoy playing with.</p>
-                
-                <p>Every puzzle we make is crafted with care from natural, sustainably-sourced beech and birch wood. We take the safety of your little ones seriously, which is why all our toys feature smooth rounded corners and are finished exclusively with non-toxic, child-safe paints and protective organic oils.</p>
+                <p>At MokoMint, we design premium educational wooden puzzles and toys that help young minds grow. We
+                    started with a simple goal: to replace plastic screens and low-quality toys with meaningful,
+                    hands-on learning tools that children genuinely enjoy playing with.</p>
 
-                <p>By blending timeless wooden craftsmanship with foundational learning concepts—covering languages, early mathematics, color identification, and motor skills—we ensure that every piece provides hours of healthy, independent exploration for smart toddlers.</p>
+                <p>Every puzzle we make is crafted with care from natural, sustainably-sourced beech and birch wood. We
+                    take the safety of your little ones seriously, which is why all our toys feature smooth rounded
+                    corners and are finished exclusively with non-toxic, child-safe paints and protective organic oils.
+                </p>
+
+                <p>By blending timeless wooden craftsmanship with foundational learning concepts—covering languages,
+                    early mathematics, color identification, and motor skills—we ensure that every piece provides hours
+                    of healthy, independent exploration for smart toddlers.</p>
 
                 <table class="highlight-strips">
                     <tr>
@@ -562,16 +587,18 @@
     <!-- PAGES: Alphabets and Alphabets with Pictures -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
         <!-- Re-added missing decorative background shapes to middle pages -->
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12"/>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
         </svg>
         <div class="foreground-content">
             <div class="header-ribbon-bar">
@@ -599,7 +626,9 @@
                         <span class="lbl-badge lbl-green">Hidden pictures underneath alphabets</span>
                         <!-- <span class="lbl-badge lbl-blue">Tactile Pack</span> -->
                     </div>
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Each of the 26 colorful uppercase letters comes with a sturdy easy-grip knob, specifically designed for tiny hands to strengthen their pincer grasp and hand-eye coordination.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Each of the 26 colorful uppercase
+                        letters comes with a sturdy easy-grip knob, specifically designed for tiny hands to strengthen
+                        their pincer grasp and hand-eye coordination.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
@@ -630,7 +659,8 @@
                         <span class="lbl-badge lbl-green">Luxury Keepsake</span>
                         <span class="lbl-badge lbl-blue">Complete Set</span>
                     </div> -->
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Give your child a head start with our Premium Wooden Alphabet Board, designed to make "The Basics" feel like pure playtime.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Give your child a head start with
+                        our Premium Wooden Alphabet Board, designed to make "The Basics" feel like pure playtime.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
@@ -640,27 +670,30 @@
                 </div>
             </div>
 
+
             <div class="footer-baseline">
                 <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
                 <div class="footer-lbl-right">Page 3</div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <!-- PAGES: Numbers & Shapes -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
         <!-- Re-added missing decorative background shapes to middle pages -->
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12"/>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
         </svg>
         <div class="foreground-content">
             <div class="header-ribbon-bar">
@@ -688,7 +721,9 @@
                         <span class="lbl-badge lbl-green">Dual View Kit</span>
                         <span class="lbl-badge lbl-blue">Tactile Pack</span>
                     </div> -->
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Step into the world of math with our Premium Wooden Numbers Puzzle. Featuring the full sequence from 1 to 20, this set moves beyond basic counting to help children master double-digit recognition.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Step into the world of math with our
+                        Premium Wooden Numbers Puzzle. Featuring the full sequence from 1 to 20, this set moves beyond
+                        basic counting to help children master double-digit recognition.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
@@ -719,7 +754,9 @@
                         <span class="lbl-badge lbl-green">Luxury Keepsake</span>
                         <span class="lbl-badge lbl-blue">Complete Set</span>
                     </div> -->
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Unlock the world of geometry and logic with our Premium Wooden Shapes Puzzle. This tactile learning set introduces your child to fundamental shapes and vibrant colors.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Unlock the world of geometry and
+                        logic with our Premium Wooden Shapes Puzzle. This tactile learning set introduces your child to
+                        fundamental shapes and vibrant colors.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
@@ -735,21 +772,23 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <!-- PAGES: Fruits & Veg -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
         <!-- Re-added missing decorative background shapes to middle pages -->
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12"/>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
         </svg>
         <div class="foreground-content">
             <div class="header-ribbon-bar">
@@ -777,7 +816,10 @@
                         <span class="lbl-badge lbl-green">Dual View Kit</span>
                         <span class="lbl-badge lbl-blue">Tactile Pack</span>
                     </div> -->
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Fuel your child’s curiosity and introduce them to nature’s treats with our Premium Wooden Fruit Puzzle. Designed to make early learning feel like playtime, this vibrant set is the perfect tool for building a foundation of healthy habits.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Fuel your child’s curiosity and
+                        introduce them to nature’s treats with our Premium Wooden Fruit Puzzle. Designed to make early
+                        learning feel like playtime, this vibrant set is the perfect tool for building a foundation of
+                        healthy habits.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
@@ -808,7 +850,8 @@
                         <span class="lbl-badge lbl-green">Luxury Keepsake</span>
                         <span class="lbl-badge lbl-blue">Complete Set</span>
                     </div> -->
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Encourage a love for greens with our Premium Wooden Vegetable Puzzle. Designed to turn early learning into a vibrant adventure.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Encourage a love for greens with our
+                        Premium Wooden Vegetable Puzzle. Designed to turn early learning into a vibrant adventure.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
@@ -824,21 +867,23 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <!-- PAGES: Hindi Swar -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
         <!-- Re-added missing decorative background shapes to middle pages -->
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12"/>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
         </svg>
         <div class="foreground-content">
             <div class="header-ribbon-bar">
@@ -866,11 +911,46 @@
                         <span class="lbl-badge lbl-green">Dual View Kit</span>
                         <span class="lbl-badge lbl-blue">Tactile Pack</span>
                     </div> -->
-                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Designed to make "Varnamala" engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile, hands-on format.</div>
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Designed to make "Varnamala"
+                        engaging and accessible, this vibrant board features all the Hindi vowels (Swar) in a tactile,
+                        hands-on format.</div>
                     <table class="card-p-footer">
                         <tr>
                             <td class="price-val"></td>
                             <td class="moq-val">Item code: MM-WP-107HS</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Monkey-1.png" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Monkey-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Dancing Monkey Toy</div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Our Playful Monkey Toy keeps babies
+                        entertained with lights, sounds, vibrant colors, and fun tumbling action.
+                        Designed to encourage crawling, walking, and active play through exciting movement and
+                        interaction. </div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-ET-101MK</td>
                         </tr>
                     </table>
                 </div>
@@ -882,36 +962,606 @@
             </div>
         </div>
     </div>
-
-    <!-- PAGE 6: WHOLESALE CONTRACT DETAILS & CLOSING -->
+    <!-- Gift Items -->
     <div class="catalog-page">
         <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round"/>
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
         </svg>
-        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.92"/>
-            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.88"/>
+        <!-- Re-added missing decorative background shapes to middle pages -->
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
         </svg>
-        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.90"/>
-            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.82"/>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
         </svg>
         <div class="foreground-content">
             <div class="header-ribbon-bar">
-                <h2>Partner with US</span></h2>
+                <h2>Gift Items <span> Collection</span></h2>
             </div>
 
-            <div class="wholesale-info-card" style="margin-top: 25mm;">
-                <h3>Partner with Moko<span>Mint</span><span style="font-weight: 100; color: #f48221">&trade;</span></h3>
-                <p>We offer trusted wholesale supply of our premium educational range to preschools, retail stores, gift shops, and subscription box brands across India.</p>
-                <div class="pill-contact-container">
-                    <strong><span>Email Enquiries:</span></strong> mokomint.official@gmail.com
-                    <br/>
-                    <strong><span>WhatsApp / Call:</span></strong> 92512-64027 & 97119-72036</div>
-                    <br/>
-                    <span style="font-size: 15pt; color: #555555; display: block; margin-top: 2.5mm; font-weight: bold;">Website: www.mokomint.com</span>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Speaker1.png" alt="Hindi Swar Front View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Speaker2.png" alt="Hindi Swar Back View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Rechargeable Karaoke Mic with
+                        Speaker for Singing
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Dual View Kit</span>
+                        <span class="lbl-badge lbl-blue">Tactile Pack</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Experience powerful, crystal-clear
+                        sound with our Mini Karaoke Machine, featuring dual speakers with deep bass and crisp treble.
+                        Complete with built-in LED lights, it creates a fun and immersive singing experience for every
+                        performance.</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-ET-102SM</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="TreeBalance-1.png" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="TreeBalance-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Frog Tree Balance Stacking
+                        Board Game for Kids
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Crafted from durable 100% ABS
+                        material, this game features smooth, burr-free edges for safe and confident play.
+                        Its vibrant colors and sturdy design enhance visual appeal while supporting cognitive
+                        development.</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-TY-101FTB</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="footer-baseline">
+                <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
+                <div class="footer-lbl-right">Page 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-page">
+        <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+        </svg>
+        <!-- Re-added missing decorative background shapes to middle pages -->
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
+        </svg>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
+        </svg>
+        <div class="foreground-content">
+            <div class="header-ribbon-bar">
+                <h2>Gift Items <span> Collection</span></h2>
+            </div>
+
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Magnet-1.png" alt="Hindi Swar Front View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Magnet-2.png" alt="Hindi Swar Back View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Magnetic Bar Blocks for Kids
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Dual View Kit</span>
+                        <span class="lbl-badge lbl-blue">Tactile Pack</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Encourage creativity and
+                        problem-solving as kids build endless shapes, structures, and designs with magnetic bar blocks.
+                        Designed to support early STEM learning through fun, hands-on construction and imaginative play.
+                    </div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-MP-101P25</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Multi-1.png" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Multi-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">13-in-1 Magnetic Ludo, Chess,
+                        Snake and Ladder and More
+                        Board Game for Kids and Family
+                        Fun Game
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Bring the whole family together with
+                        our 13-in-1 Family Game Set, packed with exciting indoor and board games for all ages.
+                        Perfect for fun-filled evenings with family and friends, offering endless entertainment in one
+                        box.</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-GM-101MIX</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="footer-baseline">
+                <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
+                <div class="footer-lbl-right">Page 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-page">
+        <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+        </svg>
+        <!-- Re-added missing decorative background shapes to middle pages -->
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
+        </svg>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
+        </svg>
+        <div class="foreground-content">
+            <div class="header-ribbon-bar">
+                <h2>Gift Items <span> Collection</span></h2>
+            </div>
+
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Pixels.png" alt="Hindi Swar Front View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Pixels-2.png" alt="Hindi Swar Back View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Plastic, Beads Pixels Jungle
+                        Safari Fridge Magnets Badges
+                        Making Kit for Children
+                        Creativity
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Dual View Kit</span>
+                        <span class="lbl-badge lbl-blue">Tactile Pack</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Create endless colorful designs with
+                        this fun bead set featuring a transparent peg board and over 2,000 beads.
+                        Includes bead clips, ironing paper, badge pins, magnets, and instructions for creative play for
+                        kids above 5 years.
+                    </div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-GM-102PX</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Creative-1.jpg" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Monkey-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">5-in-1 Awesome Craft Kit - Kids
+                        Arts and Crafts
+
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;"> Packed with 10+ exciting projects,
+                        this arts and crafts kit includes stamp art, 3D foam flower making, friendship bands, and more.
+                        A fun and inspiring activity set that encourages creativity and keeps kids engaged for
+                        hours.</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-BP-103CR</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="footer-baseline">
+                <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
+                <div class="footer-lbl-right">Page 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-page">
+        <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+        </svg>
+        <!-- Re-added missing decorative background shapes to middle pages -->
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
+        </svg>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
+        </svg>
+        <div class="foreground-content">
+            <div class="header-ribbon-bar">
+                <h2>Gift Items <span> Collection</span></h2>
+            </div>
+
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="worldMap-1.jpg" alt="Hindi Swar Front View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Hindi-Swar-2.jpg" alt="Hindi Swar Back View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">World Map and Its CountriesLearning Aid & Educational ToyJigsaw
+                        Puzzle
+
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Dual View Kit</span>
+                        <span class="lbl-badge lbl-blue">Tactile Pack</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Help children understand country
+                        sizes through hands-on learning as they compare puzzle pieces like India and China.
+                        The relative-size puzzle design makes geography learning fun, visual, and easy to
+                        understand.
+                    </div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-BP-102WM</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="india-1.jpg" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Monkey-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">India with State Capitals -
+                        Educational Toy and Learning
+                        Aid for Boys and Girls - India
+                        Map Puzzle
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Learn geography the fun way with
+                        Flag the Capitals by matching capital stickers to their respective states on the map.
+                        Kids can place the plastic flags into the correct slots, making learning interactive,
+                        engaging,
+                        and educational</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-ET-101MK</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="footer-baseline">
+                <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
+                <div class="footer-lbl-right">Page 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-page">
+        <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+        </svg>
+        <!-- Re-added missing decorative background shapes to middle pages -->
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
+        </svg>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
+        </svg>
+        <div class="foreground-content">
+            <div class="header-ribbon-bar">
+                <h2>Perfect Return Gift Items <span> Collection</span></h2>
+            </div>
+
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="biscuit-0.png" alt="Hindi Swar Front View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="biscuit-3.png" alt="Hindi Swar Back View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Crunch-Series Biscuit
+                        Pocketbook
+
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Dual View Kit</span>
+                        <span class="lbl-badge lbl-blue">Tactile Pack</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Featuring a fun biscuit-themed
+                        textured cover, this diary adds a playful touch to everyday writing.
+                        Compact and portable, it’s perfect for school notes, doodles, and creative ideas on the go.
+                    </div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-CD-101R</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="india-1.jpg" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Monkey-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Gourmet Scented Chocolate
+                        Diary
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Designed like a realistic chocolate
+                        bar, this diary comes with a delightful long-lasting cocoa fragrance.
+                        Featuring high-quality unruled pages, it’s perfect for sketching, journaling, or gifting.</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-ET-101MK</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="footer-baseline">
+                <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
+                <div class="footer-lbl-right">Page 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog-page">
+        <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+        </svg>
+        <!-- Re-added missing decorative background shapes to middle pages -->
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.15" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.12" />
+        </svg>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.12" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.10" />
+        </svg>
+        <div class="foreground-content">
+            <div class="header-ribbon-bar">
+                <h2>Perfect Return Gift Items <span> Collection</span></h2>
+            </div>
+
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="girls-diary.png" alt="Hindi Swar Front View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="boys-diary.png" alt="Hindi Swar Back View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Cartoon Pocket Diary with Pen,
+                        Writing Notebook for Kids Boys
+                        Girls
+
+
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Dual View Kit</span>
+                        <span class="lbl-badge lbl-blue">Tactile Pack</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Encourage kids to build a daily
+                        journaling habit with this cute and compact diary that comes with a free mini pen.
+                        Perfectly sized for schoolbags, handbags, and backpacks, making it a thoughtful gift for all
+                        ages.
+                    </div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-BD-101SM</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="horizontal-multi-view-card">
+                <table class="square-images-row">
+                    <tr>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="india-1.jpg" alt="Gift Box Bundle View" />
+                            </div>
+                        </td>
+                        <td class="square-image-container">
+                            <div class="square-img-box">
+                                <img src="Monkey-2.png" alt="Gift Box Inner View" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="horizontal-card-body">
+                    <div class="vertical-title">Gourmet Scented Chocolate
+                        Diary
+
+                    </div>
+                    <!-- <div style="margin-bottom: 2mm;">
+                        <span class="lbl-badge lbl-green">Luxury Keepsake</span>
+                        <span class="lbl-badge lbl-blue">Complete Set</span>
+                    </div> -->
+                    <div class="vertical-desc" style="margin: 2mm 0; height: auto;">Designed like a realistic chocolate
+                        bar, this diary comes with a delightful long-lasting cocoa fragrance.
+                        Featuring high-quality unruled pages, it’s perfect for sketching, journaling, or gifting.</div>
+                    <table class="card-p-footer">
+                        <tr>
+                            <td class="price-val"></td>
+                            <td class="moq-val">Item code: MM-ET-101MK</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
             <div class="footer-baseline">
                 <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
                 <div class="footer-lbl-right">Page 7</div>
@@ -919,5 +1569,50 @@
         </div>
     </div>
 
+    <!-- PAGE 6: WHOLESALE CONTRACT DETAILS & CLOSING -->
+    <div class="catalog-page">
+        <svg class="card-top-left-dashes" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="12" x2="22" y2="34" stroke="#f48221" stroke-width="6.5" stroke-linecap="round" />
+        </svg>
+        <svg class="card-bottom-left-blobs" viewBox="0 0 160 130" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C35,45 55,20 80,60 C105,100 65,110 110,130 L0,130 Z" fill="#96d55a" opacity="0.92" />
+            <path d="M0,60 C45,70 35,40 75,85 C115,130 95,115 140,130 L0,130 Z" fill="#2fa5dc" opacity="0.88" />
+        </svg>
+        <svg class="card-bottom-right-blobs" viewBox="0 0 140 110" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,25 C100,45 115,15 85,65 C55,115 90,95 40,110 L140,110 Z" fill="#2fa5dc" opacity="0.90" />
+            <path d="M140,50 C115,65 120,45 100,80 C80,115 105,100 70,110 L140,110 Z" fill="#96d55a" opacity="0.82" />
+        </svg>
+        <div class="foreground-content">
+            <div class="header-ribbon-bar">
+                <h2>Partner with US</span></h2>
+            </div>
+
+            <div class="wholesale-info-card" style="margin-top: 25mm;">
+                <h3>Partner with Moko<span>Mint</span><span style="font-weight: 100; color: #f48221">&trade;</span>
+                </h3>
+                <p>We offer trusted wholesale supply of our premium educational range to preschools, retail stores,
+                    gift
+                    shops, and subscription box brands across India.</p>
+                <div class="pill-contact-container">
+                    <strong><span>Email Enquiries:</span></strong> mokomint.official@gmail.com
+                    <br />
+                    <strong><span>WhatsApp / Call:</span></strong> 92512-64027
+                </div>
+                <br />
+                <span
+                    style="font-size: 15pt; color: #555555; display: block; margin-top: 2.5mm; font-weight: bold;">Website:
+                    www.mokomint.com</span>
+            </div>
+        </div>
+        <div class="footer-baseline">
+            <div class="footer-lbl-left">MokoMint&trade; — Smart Little Minds</div>
+            <div class="footer-lbl-right">Page 7</div>
+        </div>
+    </div>
+    </div>
+
 </body>
+
 </html>
